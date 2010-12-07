@@ -1,0 +1,5 @@
+debconf-kde (0.1+git20101228-1) unstable; urgency=low
+
+  * Initial release (Closes: #606251)
+
+ -- Matthias Klumpp <matthias@nlinux.org>  Tue, 07 Dec 2010 20:59:03 +0100
