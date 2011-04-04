@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2010-12-04 02:35+0100\n"
+"PO-Revision-Date: 2010-11-13 23:19+0100\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Magyar <kde-l10n-hu@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: src/DebconfGui.cpp:121
+#, kde-format
+msgid "Debconf on %1"
+msgstr "Debconf a következőn: %1"
+
+#: src/DebconfGui.cpp:219
+#, kde-format
+msgid ""
+"<b>Not implemented</b>: The input widget for data type '%1' is not "
+"implemented. Will use default of '%2'."
+msgstr ""
+"<b>Nincs implementálva</b>: A(z) „%1” adattípushoz tartozó beviteli elem "
+"nincs implementálva, az alapértelmezett „%2” kerül felhasználásra."
+
+#: tools/main.cpp:34
+msgid "Debconf KDE"
+msgstr "Debconf KDE"
+
+#: tools/main.cpp:36
+msgid "Debconf frontend for KDE"
+msgstr "Debconf előtétprogram a KDE-hez"
+
+#: tools/main.cpp:42
+msgid "Path to where the socket should be created"
+msgstr ""
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@kubuntu.org"
+
+#. i18n: file: src/DebconfBoolean.ui:48
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#: rc.cpp:6
+msgid "Yes"
+msgstr "Igen"
+
+#. i18n: file: src/DebconfBoolean.ui:64
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#: rc.cpp:9
+msgid "No"
+msgstr "Nem"
+
+#. i18n: file: src/DebconfError.ui:23
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#. i18n: file: src/DebconfGui.ui:44
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#: rc.cpp:12 rc.cpp:16
+msgid "Icon"
+msgstr "Ikon"
+
+#. i18n: file: src/DebconfGui.ui:83
+#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
+#: rc.cpp:19
+msgid "Cancel"
+msgstr "Mégsem"
+
+#. i18n: file: src/DebconfGui.ui:93
+#. i18n: ectx: property (text), widget (KPushButton, backPB)
+#: rc.cpp:22
+msgid "Back"
+msgstr "Vissza"
+
+#. i18n: file: src/DebconfGui.ui:100
+#. i18n: ectx: property (text), widget (KPushButton, nextPB)
+#: rc.cpp:25
+msgid "Continue"
+msgstr "Folytatás"

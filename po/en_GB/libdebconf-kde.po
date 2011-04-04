@@ -1,0 +1,100 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrew Coles <andrew_coles@yahoo.co.uk>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2010-12-04 02:35+0100\n"
+"PO-Revision-Date: 2010-12-03 22:29+0000\n"
+"Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
+"Language-Team: British English <kde-i18n-doc@kde.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: src/DebconfGui.cpp:121
+#, kde-format
+msgid "Debconf on %1"
+msgstr "Debconf on %1"
+
+#: src/DebconfGui.cpp:219
+#, kde-format
+msgid ""
+"<b>Not implemented</b>: The input widget for data type '%1' is not "
+"implemented. Will use default of '%2'."
+msgstr ""
+"<b>Not implemented</b>: The input widget for data type '%1' is not "
+"implemented. Will use default of '%2'."
+
+#: tools/main.cpp:34
+msgid "Debconf KDE"
+msgstr "Debconf KDE"
+
+#: tools/main.cpp:36
+msgid "Debconf frontend for KDE"
+msgstr "Debconf frontend for KDE"
+
+#: tools/main.cpp:42
+msgid "Path to where the socket should be created"
+msgstr "Path to where the socket should be created"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andrew Coles"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andrew_coles@yahoo.co.uk"
+
+#. i18n: file: src/DebconfBoolean.ui:48
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#: rc.cpp:6
+msgid "Yes"
+msgstr "Yes"
+
+#. i18n: file: src/DebconfBoolean.ui:64
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#: rc.cpp:9
+msgid "No"
+msgstr "No"
+
+#. i18n: file: src/DebconfError.ui:23
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#. i18n: file: src/DebconfGui.ui:44
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#: rc.cpp:12 rc.cpp:16
+msgid "Icon"
+msgstr "Icon"
+
+#. i18n: file: src/DebconfGui.ui:83
+#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
+#: rc.cpp:19
+msgid "Cancel"
+msgstr "Cancel"
+
+#. i18n: file: src/DebconfGui.ui:93
+#. i18n: ectx: property (text), widget (KPushButton, backPB)
+#: rc.cpp:22
+msgid "Back"
+msgstr "Back"
+
+#. i18n: file: src/DebconfGui.ui:100
+#. i18n: ectx: property (text), widget (KPushButton, nextPB)
+#: rc.cpp:25
+msgid "Continue"
+msgstr "Continue"
+
+#~ msgid "Form"
+#~ msgstr "Form"
+
+#~ msgid "Label"
+#~ msgstr "Label"
+
+#~ msgid "TextLabel"
+#~ msgstr "TextLabel"
