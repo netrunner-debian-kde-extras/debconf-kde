@@ -11,7 +11,7 @@ unixdate := $(shell date -d $(isodate) +%s)
 unixdate := $(shell expr $(unixdate) + 86400 )
 
 %:
-	dh $@ --with kde --dbg-package=debconf-kde-dbg
+	dh $@ --parallel --with kde --dbg-package=debconf-kde-dbg
 
 get-orig-source:
 	# Cleaning up
