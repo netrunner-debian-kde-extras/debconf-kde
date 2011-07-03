@@ -1,5 +1,6 @@
 // This license reflects the original Adept code:
 // -*- C++ -*- (c) 2008 Petr Rockai <me@mornfall.net>
+//             (c) 2011 Modestas Vainius <modax@debian.org>
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are
 // met:
@@ -54,6 +55,9 @@
 #include <QtCore/QRegExp>
 #include <QtCore/QStringBuilder>
 #include <QtCore/QFile>
+#include <QtCore/QSocketNotifier>
+#include <cstdio>
+#include <unistd.h>
 
 #include <KDebug>
 
@@ -70,43 +74,22 @@ const DebconfFrontend::Cmd DebconfFrontend::commands[] = {
     { "GET", &DebconfFrontend::cmd_get },
     { "CAPB", &DebconfFrontend::cmd_capb },
     { "PROGRESS", &DebconfFrontend::cmd_progress },
+    { "X_PING", &DebconfFrontend::cmd_x_ping },
     { 0, 0 } };
 
-DebconfFrontend::DebconfFrontend(const QString &socketName, QObject *parent)
-  : QObject(parent), m_socket(0)
+DebconfFrontend::DebconfFrontend(QObject *parent)
+  : QObject(parent)
 {
-    m_server = new QLocalServer(this);
-    QFile::remove(socketName);
-    m_server->listen(socketName);
-    connect(m_server, SIGNAL(newConnection()), this, SLOT(newConnection()));
-}
-
-void DebconfFrontend::newConnection()
-{
-    kDebug();
-    if (m_socket) {
-        QLocalSocket *socket = m_server->nextPendingConnection();
-        socket->disconnectFromServer();
-        socket->deleteLater();
-        return;
-    }
-
-    m_socket = m_server->nextPendingConnection();
-    if (m_socket) {
-        connect(m_socket, SIGNAL(readyRead()), this, SLOT(process()));
-        connect(m_socket, SIGNAL(disconnected()), this, SLOT(disconnected()));
-    }
 }
 
 DebconfFrontend::~DebconfFrontend()
 {
-    QFile::remove(m_server->fullServerName());
 }
 
 void DebconfFrontend::disconnected()
 {
-    emit finished();
     reset();
+    emit finished();
 }
 
 QString DebconfFrontend::value(const QString &key) const
@@ -156,8 +139,6 @@ DebconfFrontend::TypeKey DebconfFrontend::type(const QString &string) const
 void DebconfFrontend::reset()
 {
     emit backup(false);
-    m_socket->deleteLater();
-    m_socket = 0;
     m_data.clear();
     m_subst.clear();
     m_values.clear();
@@ -166,8 +147,9 @@ void DebconfFrontend::reset()
 void DebconfFrontend::say(const QString &string)
 {
     kDebug() << "DEBCONF ---> " << string;
-    QTextStream out(m_socket);
+    QTextStream out(getWriteDevice());
     out << string << "\n";
+    out.flush();
 }
 
 QString DebconfFrontend::substitute(const QString &key, const QString &rest) const
@@ -253,7 +235,6 @@ void DebconfFrontend::back()
 
 void DebconfFrontend::cancel()
 {
-    m_socket->disconnectFromServer();
     reset();
 }
 
@@ -300,9 +281,15 @@ void DebconfFrontend::cmd_subst(const QString &param)
     say(QLatin1String( "0 ok" ));
 }
 
+void DebconfFrontend::cmd_x_ping(const QString &param)
+{
+    Q_UNUSED(param);
+    say(QLatin1String( "0 pong" ));
+}
+
 bool DebconfFrontend::process()
 {
-    QTextStream in(m_socket);
+    QTextStream in(getReadDevice());
     QString line = in.readLine();
 
     if (line.isEmpty()) {
@@ -324,5 +311,105 @@ bool DebconfFrontend::process()
     return false;
 }
 
+DebconfFrontendSocket::DebconfFrontendSocket(const QString &socketName, QObject *parent)
+  : DebconfFrontend(parent), m_socket(0)
+{
+    m_server = new QLocalServer(this);
+    QFile::remove(socketName);
+    m_server->listen(socketName);
+    connect(m_server, SIGNAL(newConnection()), this, SLOT(newConnection()));
 }
+
+DebconfFrontendSocket::~DebconfFrontendSocket()
+{
+    QFile::remove(m_server->fullServerName());
+}
+
+void DebconfFrontendSocket::newConnection()
+{
+    kDebug();
+    if (m_socket) {
+        QLocalSocket *socket = m_server->nextPendingConnection();
+        socket->disconnectFromServer();
+        socket->deleteLater();
+        return;
+    }
+
+    m_socket = m_server->nextPendingConnection();
+    if (m_socket) {
+        connect(m_socket, SIGNAL(readyRead()), this, SLOT(process()));
+        connect(m_socket, SIGNAL(disconnected()), this, SLOT(disconnected()));
+    }
+}
+
+void DebconfFrontendSocket::reset()
+{
+    if (m_socket) {
+        m_socket->deleteLater();
+        m_socket = 0;
+    }
+    DebconfFrontend::reset();
+}
+
+void DebconfFrontendSocket::cancel()
+{
+    if (m_socket) {
+        m_socket->disconnectFromServer();
+    }
+    DebconfFrontend::cancel();
+}
+
+DebconfFrontendFifo::DebconfFrontendFifo(int readfd, int writefd, QObject *parent)
+  : DebconfFrontend(parent)
+{
+    m_readf = new QFile(this);
+    // Use QFile::open(fh,mode) method for opening read file descriptor as
+    // sequential files opened with QFile::open(fd,mode) are not handled
+    // properly.
+    FILE *readfh = ::fdopen(readfd, "rb");
+    m_readf->open(readfh, QIODevice::ReadOnly);
+
+    m_writef = new QFile(this);
+    m_writef->open(writefd, QIODevice::WriteOnly);
+    // QIODevice::readyReady() does not work with QFile
+    // http://bugreports.qt.nokia.com/browse/QTBUG-16089
+    m_readnotifier = new QSocketNotifier(readfd, QSocketNotifier::Read, this);
+    connect(m_readnotifier, SIGNAL(activated(int)), this, SLOT(process()));
+}
+
+void DebconfFrontendFifo::reset()
+{
+    if (m_readf) {
+        // Close file descriptors
+        int readfd = m_readf->handle();
+        int writefd = m_writef->handle();
+        m_readnotifier->setEnabled(false);
+        m_readf->close();
+        m_writef->close();
+        m_readf = m_writef = 0;
+
+        // Use C library calls because QFile::close() won't close them actually
+        ::close(readfd);
+        ::close(writefd);
+    }
+    DebconfFrontend::reset();
+}
+
+void DebconfFrontendFifo::cancel()
+{
+    disconnected();
+}
+
+bool DebconfFrontendFifo::process()
+{
+    // We will get notification when the other end is closed
+    if (m_readf->atEnd()) {
+        cancel();
+        return false;
+    }
+    return DebconfFrontend::process();
+}
+
+}
+
 #include "debconf.moc"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-04 02:35+0100\n"
+"POT-Creation-Date: 2011-05-12 04:04+0200\n"
 "PO-Revision-Date: 2010-12-03 22:29+0000\n"
 "Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -54,13 +54,13 @@ msgstr "andrew_coles@yahoo.co.uk"
 
 #. i18n: file: src/DebconfBoolean.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: rc.cpp:6
+#: rc.cpp:5
 msgid "Yes"
 msgstr "Yes"
 
 #. i18n: file: src/DebconfBoolean.ui:64
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: rc.cpp:9
+#: rc.cpp:8
 msgid "No"
 msgstr "No"
 
@@ -68,25 +68,25 @@ msgstr "No"
 #. i18n: ectx: property (text), widget (QLabel, iconL)
 #. i18n: file: src/DebconfGui.ui:44
 #. i18n: ectx: property (text), widget (QLabel, iconL)
-#: rc.cpp:12 rc.cpp:16
+#: rc.cpp:11 rc.cpp:14
 msgid "Icon"
 msgstr "Icon"
 
 #. i18n: file: src/DebconfGui.ui:83
 #. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: rc.cpp:19
+#: rc.cpp:17
 msgid "Cancel"
 msgstr "Cancel"
 
 #. i18n: file: src/DebconfGui.ui:93
 #. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: rc.cpp:22
+#: rc.cpp:20
 msgid "Back"
 msgstr "Back"
 
 #. i18n: file: src/DebconfGui.ui:100
 #. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: rc.cpp:25
+#: rc.cpp:23
 msgid "Continue"
 msgstr "Continue"
 
