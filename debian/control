@@ -13,6 +13,7 @@ Vcs-Git: git://git.debian.org/git/pkg-kde/kde-extras/debconf-kde.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/debconf-kde.git
 
 Package: libdebconf-kde0
+Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Debconf KDE GUI library
