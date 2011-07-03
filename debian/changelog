@@ -1,3 +1,12 @@
+debconf-kde (0.1+git20110702-1) unstable; urgency=low
+
+  * Transfer package to pkg-kde-extras team
+  * Update to new Git revision, which contains
+     lots of improvements.
+  * Fixed get-orig-source rule
+
+ -- Matthias Klumpp <matthias@nlinux.org>  Sat, 02 Jul 2011 19:40:26 +0200
+
 debconf-kde (0.1+git20101228-1) unstable; urgency=low
 
   * Initial release (Closes: #606251)
