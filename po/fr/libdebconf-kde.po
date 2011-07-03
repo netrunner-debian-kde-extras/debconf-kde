@@ -2,13 +2,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Joëlle Cornavin <jcornavin@laposte.net>, 2010.
+# Joëlle Cornavin <jcornavin@laposte.net>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: libdebconf-kde\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2010-12-04 02:35+0100\n"
-"PO-Revision-Date: 2010-07-29 19:33+0200\n"
+"POT-Creation-Date: 2011-05-12 04:04+0200\n"
+"PO-Revision-Date: 2011-01-22 16:05+0100\n"
 "Last-Translator: Joëlle Cornavin <jcornavin@laposte.net>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -27,8 +27,8 @@ msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 msgstr ""
-"<b>Non impplémenté</b> : l'élément graphique d'entrée pour le type de "
-"données « %1 » n'est pas implémenté. Utilisation par défaut de « %2 »."
+"<b>Non implémenté</b> : l'élément graphique d'entrée pour le type de données "
+"« %1 » n'est pas implémenté. Utilisation par défaut de « %2 »."
 
 #: tools/main.cpp:34
 msgid "Debconf KDE"
@@ -40,7 +40,7 @@ msgstr "Interface Debconf pour KDE"
 
 #: tools/main.cpp:42
 msgid "Path to where the socket should be created"
-msgstr ""
+msgstr "Emplacement où la socket devra être créée"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
@@ -54,13 +54,13 @@ msgstr "jcornavin@laposte.net"
 
 #. i18n: file: src/DebconfBoolean.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: rc.cpp:6
+#: rc.cpp:5
 msgid "Yes"
 msgstr "Oui"
 
 #. i18n: file: src/DebconfBoolean.ui:64
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: rc.cpp:9
+#: rc.cpp:8
 msgid "No"
 msgstr "Non"
 
@@ -68,33 +68,24 @@ msgstr "Non"
 #. i18n: ectx: property (text), widget (QLabel, iconL)
 #. i18n: file: src/DebconfGui.ui:44
 #. i18n: ectx: property (text), widget (QLabel, iconL)
-#: rc.cpp:12 rc.cpp:16
+#: rc.cpp:11 rc.cpp:14
 msgid "Icon"
 msgstr "Icône"
 
 #. i18n: file: src/DebconfGui.ui:83
 #. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: rc.cpp:19
+#: rc.cpp:17
 msgid "Cancel"
 msgstr "Annuler"
 
 #. i18n: file: src/DebconfGui.ui:93
 #. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: rc.cpp:22
+#: rc.cpp:20
 msgid "Back"
 msgstr "Revenir en arrière"
 
 #. i18n: file: src/DebconfGui.ui:100
 #. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: rc.cpp:25
+#: rc.cpp:23
 msgid "Continue"
 msgstr "Poursuivre"
-
-#~ msgid "Form"
-#~ msgstr "Formulaire"
-
-#~ msgid "Label"
-#~ msgstr "Étiquette"
-
-#~ msgid "TextLabel"
-#~ msgstr "TextLabel"
