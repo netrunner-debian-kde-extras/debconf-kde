@@ -19,18 +19,20 @@ get-orig-source:
 	rm -f ../debconf-kde_$(upstream_version).orig.tar.gz
 
 	# Download the latest Git revision and downgrade it to $(isodate).
-	git clone git://git.kde.org/libdebconf-kde debconf-kde-$(upstream_version)
-	cd debconf-kde-$(upstream_version) && git reset --hard $(shell git rev-list --all -n 1 --before=$(unixdate))
+	git clone git://anongit.kde.org/libdebconf-kde debconf-kde-$(upstream_version)
+	cd debconf-kde-$(upstream_version) && git reset --hard $(shell cd debconf-kde-$(upstream_version) && \
+									git rev-list --all -n 1 --before=$(unixdate))
 
 	# Fetch translations from KDE SVN
 	mkdir -p debconf-kde-$(upstream_version)/po
 	cd debconf-kde-$(upstream_version)/po; svn export svn://anonsvn.kde.org/home/kde/trunk/l10n-kde4/subdirs
 	cd debconf-kde-$(upstream_version)/po; for asdf in `cat subdirs`; do mkdir -p $${asdf}; done
-	cd debconf-kde-$(upstream_version)/po; for asdf in `cat subdirs`; do echo $${asdf}; cd $${asdf}; svn export svn://anonsvn.kde.org/home/kde/trunk/l10n-kde4/$${asdf}/messages/kdereview/libdebconf-kde.po; cd ..; done
+	cd debconf-kde-$(upstream_version)/po; for asdf in `cat subdirs`; do echo $${asdf}; cd $${asdf}; svn export svn://anonsvn.kde.org/home/kde/trunk/l10n-kde4/$${asdf}/messages/extragear-sysadmin/libdebconf-kde.po; cd ..; done
 	cd debconf-kde-$(upstream_version)/po; rm subdirs; rmdir --ignore-fail-on-non-empty */
 	cd debconf-kde-$(upstream_version) && git add ./po && git commit -m "Included translations"
 
 	# Make a pristine package.
+	mkdir -p ../origtar/
 	cd debconf-kde-$(upstream_version) && git archive --format=tar --prefix=debconf-kde-$(upstream_version)/ master | gzip -9 --no-name > \
 		../../origtar/debconf-kde_$(upstream_version).orig.tar.gz
 	# Remove temporary workspace
