@@ -13,6 +13,9 @@ unixdate := $(shell expr $(unixdate) + 86400 )
 %:
 	dh $@ --parallel --with kde --dbg-package=debconf-kde-dbg
 
+override_dh_install:
+	dh_install --list-missing
+
 get-orig-source:
 	# Cleaning up
 	rm -rf debconf-kde-$(upstream_version)
