@@ -4,6 +4,8 @@ debconf-kde (0.1+git20110702-1) unstable; urgency=low
   * Update to new Git revision, which contains
      lots of improvements.
   * Fixed get-orig-source rule
+  * Updated package description
+  * Added Vcs-* fields
 
  -- Matthias Klumpp <matthias@nlinux.org>  Sat, 02 Jul 2011 19:40:26 +0200
 
