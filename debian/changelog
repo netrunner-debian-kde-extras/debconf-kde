@@ -7,10 +7,10 @@ debconf-kde (0.1+git20110702-1) unstable; urgency=low
   * Updated package description
   * Added Vcs-* fields
 
- -- Matthias Klumpp <matthias@nlinux.org>  Sat, 02 Jul 2011 19:40:26 +0200
+ -- Matthias Klumpp <matthias@tenstral.net>  Sat, 02 Jul 2011 19:40:26 +0200
 
 debconf-kde (0.1+git20101228-1) unstable; urgency=low
 
   * Initial release (Closes: #606251)
 
- -- Matthias Klumpp <matthias@nlinux.org>  Sat, 11 Jun 2011 22:15:11 +0200
+ -- Matthias Klumpp <matthias@tenstral.net>  Sat, 11 Jun 2011 22:15:11 +0200
