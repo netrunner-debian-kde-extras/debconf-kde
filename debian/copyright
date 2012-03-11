@@ -1,6 +1,6 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=135
-Name: debconf-kde
-Maintainer: Daniel Nicoletti <dantti85-pk@yahoo.com.br>
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0
+Upstream-Name: debconf-kde
+Upstream-Contact: Daniel Nicoletti <dantti12@gmail.com>
 Source: https://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde/repository
 
 Files: *
