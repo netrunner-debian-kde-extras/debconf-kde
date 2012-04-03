@@ -23,3 +23,5 @@ libdebconf-kde.so.0 libdebconf-kde0 #MINVER#
  _ZTIN10DebconfKde10DebconfGuiE@Base 0.1+git20101209
  _ZTSN10DebconfKde10DebconfGuiE@Base 0.1+git20101209
  _ZTVN10DebconfKde10DebconfGuiE@Base 0.1+git20101209
+ _ZThn16_N10DebconfKde10DebconfGuiD0Ev@Base 0.2
+ _ZThn16_N10DebconfKde10DebconfGuiD1Ev@Base 0.2
