@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0
-Upstream-Name: debconf-kde
+Upstream-Name: libdebconf-kde
 Upstream-Contact: Daniel Nicoletti <dantti12@gmail.com>
 Source: https://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde/repository
 
