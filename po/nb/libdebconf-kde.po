@@ -1,30 +1,31 @@
 # Translation of libdebconf-kde to Norwegian Bokmål
 #
 # Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2011.
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:04+0200\n"
-"PO-Revision-Date: 2011-01-30 12:08+0100\n"
-"Last-Translator: Bjørn Kvisli <bjorn.kvisli@gmail.com>\n"
+"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"PO-Revision-Date: 2011-07-10 15:58+0200\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: src/DebconfGui.cpp:121
+#: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf på %1"
 
-#: src/DebconfGui.cpp:219
+#: src/DebconfGui.cpp:234
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -33,17 +34,21 @@ msgstr ""
 "<b>Ikke implementert</b>: Inndataelementet  for data type %1 er ikke "
 "implementert . Standardelement %2 blir brukt."
 
-#: tools/main.cpp:34
+#: tools/main.cpp:38
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:36
+#: tools/main.cpp:40
 msgid "Debconf frontend for KDE"
 msgstr "Debconf grenseflate for KDE"
 
-#: tools/main.cpp:42
+#: tools/main.cpp:46
 msgid "Path to where the socket should be created"
 msgstr "Sti som leder til stedet der kontakten  skal opprettes"
+
+#: tools/main.cpp:47
+msgid "FIFO file descriptors for communication with Debconf"
+msgstr "FIFO fildeskriptorer for kommunikasjon med Debconf"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"

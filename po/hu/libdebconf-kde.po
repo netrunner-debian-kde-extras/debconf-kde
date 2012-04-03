@@ -6,23 +6,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:04+0200\n"
-"PO-Revision-Date: 2011-01-29 14:53+0100\n"
+"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"PO-Revision-Date: 2011-07-27 17:13+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: hu\n"
 
-#: src/DebconfGui.cpp:121
+#: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf: %1"
 
-#: src/DebconfGui.cpp:219
+#: src/DebconfGui.cpp:234
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -31,17 +31,21 @@ msgstr ""
 "<b>Nincs implementálva</b>: A(z) „%1” adattípushoz tartozó beviteli elem "
 "nincs implementálva, az alapértelmezett „%2” kerül felhasználásra."
 
-#: tools/main.cpp:34
+#: tools/main.cpp:38
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:36
+#: tools/main.cpp:40
 msgid "Debconf frontend for KDE"
 msgstr "Debconf előtétprogram a KDE-hez"
 
-#: tools/main.cpp:42
+#: tools/main.cpp:46
 msgid "Path to where the socket should be created"
 msgstr "A létrehozandó socket elérési útja"
+
+#: tools/main.cpp:47
+msgid "FIFO file descriptors for communication with Debconf"
+msgstr "FIFO-fájlleírók a Debconffal való kommunikációhoz"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"

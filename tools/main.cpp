@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 Daniel Nicoletti <dantti85-pk@yahoo.com.br>
+ * Copyright (C) 2010 Daniel Nicoletti <dantti12@gmail.com>
  *           (C) 2011 Modestas Vainius <modax@debian.org>
  *
  * This library is free software; you can redistribute it and/or
@@ -36,7 +36,7 @@ int main(int argc, char **argv)
     KAboutData aboutData("debkonf",
                          QByteArray(),
                          ki18n("Debconf KDE"),
-                         "0.1",
+                         "0.2",
                          ki18n("Debconf frontend for KDE"),
                          KAboutData::License_LGPL);
 

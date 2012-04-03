@@ -1,23 +1,27 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: libdebconf-kde\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2011-08-02 05:05+0200\n"
-"PO-Revision-Date: 2010-08-02 23:54-0700\n"
-"Last-Translator: Japanese KDE translation team <Kdeveloper@kde.gr.jp>\n"
-"Language-Team: Japanese <Kdeveloper@kde.gr.jp>\n"
-"Language: ja\n"
+"PO-Revision-Date: 2011-07-29 21:20+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
-msgstr ""
+msgstr "Debconf na %1"
 
 #: src/DebconfGui.cpp:234
 #, kde-format
@@ -25,44 +29,46 @@ msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 msgstr ""
+"<b>Nie zaimplementowane</b>: Wejściowy element interfejsu dla typu danej "
+"'%1' jest niezaimplementowany. Zostanie użyty domyślny '%2'."
 
 #: tools/main.cpp:38
 msgid "Debconf KDE"
-msgstr ""
+msgstr "Debconf KDE"
 
 #: tools/main.cpp:40
 msgid "Debconf frontend for KDE"
-msgstr ""
+msgstr "Nakładka debconf dla KDE"
 
 #: tools/main.cpp:46
 msgid "Path to where the socket should be created"
-msgstr ""
+msgstr "Ścieżka, w której ma być utworzone gniazdo"
 
 #: tools/main.cpp:47
 msgid "FIFO file descriptors for communication with Debconf"
-msgstr ""
+msgstr "Deskryptory plików FIFO dla porozumiewania się z Debconf"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Łukasz Wojniłowicz"
 
 #: rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "lukasz.wojnilowicz@gmail.com"
 
 #. i18n: file: src/DebconfBoolean.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton)
 #: rc.cpp:5
 msgid "Yes"
-msgstr ""
+msgstr "Tak"
 
 #. i18n: file: src/DebconfBoolean.ui:64
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #: rc.cpp:8
 msgid "No"
-msgstr ""
+msgstr "Nie"
 
 #. i18n: file: src/DebconfError.ui:23
 #. i18n: ectx: property (text), widget (QLabel, iconL)
@@ -70,22 +76,22 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, iconL)
 #: rc.cpp:11 rc.cpp:14
 msgid "Icon"
-msgstr ""
+msgstr "Ikona"
 
 #. i18n: file: src/DebconfGui.ui:83
 #. i18n: ectx: property (text), widget (KPushButton, cancelPB)
 #: rc.cpp:17
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
 
 #. i18n: file: src/DebconfGui.ui:93
 #. i18n: ectx: property (text), widget (KPushButton, backPB)
 #: rc.cpp:20
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #. i18n: file: src/DebconfGui.ui:100
 #. i18n: ectx: property (text), widget (KPushButton, nextPB)
 #: rc.cpp:23
 msgid "Continue"
-msgstr ""
+msgstr "Kontynuuj"

@@ -1,54 +1,59 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
 # Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
+# Frederik Schwarzer <schwarzer@kde.org>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:04+0200\n"
-"PO-Revision-Date: 2010-09-21 19:35+0200\n"
-"Last-Translator: Panagiotis Papadopoulos <pano_90@gmx.net>\n"
+"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"PO-Revision-Date: 2011-07-31 18:11+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/DebconfGui.cpp:121
+#: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf auf %1"
 
-#: src/DebconfGui.cpp:219
+#: src/DebconfGui.cpp:234
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 msgstr ""
+"<b>Nicht implementiert</b>: Das Eingabe-Bedienelement für den Datentyp '%1' "
+"ist nicht implementiert. Standard von „%2“ wird verwendet."
 
-#: tools/main.cpp:34
+#: tools/main.cpp:38
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:36
+#: tools/main.cpp:40
 msgid "Debconf frontend for KDE"
 msgstr "Debconf-Oberfläche für KDE"
 
-#: tools/main.cpp:42
+#: tools/main.cpp:46
 msgid "Path to where the socket should be created"
-msgstr ""
+msgstr "Pfad, an dem der Socket erstellt werden soll"
+
+#: tools/main.cpp:47
+msgid "FIFO file descriptors for communication with Debconf"
+msgstr "FIFO-Dateideskriptoren zur Kommunikation mit Debconf"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Frederik Schwarzer"
 
 #: rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "schwarzer@kde.org"
 
 #. i18n: file: src/DebconfBoolean.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton)
