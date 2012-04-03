@@ -4,6 +4,7 @@ debconf-kde (0.2-1) unstable; urgency=low
   * Bump standards version to 3.9.3
   * Updated symbols file
   * Allow DM upload
+  * Switch to compat-level 9
 
  -- Matthias Klumpp <matthias@tenstral.net>  Tue, 03 Apr 2012 16:51:10 +0200
 
