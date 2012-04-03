@@ -1,6 +1,8 @@
 debconf-kde (0.2-1) unstable; urgency=low
 
   * New upstream release: 0.2
+  * Bump standards version to 3.9.3
+  * Updated symbols file
 
  -- Matthias Klumpp <matthias@tenstral.net>  Tue, 03 Apr 2012 16:51:10 +0200
 
