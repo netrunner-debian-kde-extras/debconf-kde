@@ -3,6 +3,7 @@ Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Matthias Klumpp <matthias@tenstral.net>
+DM-Upload-Allowed: yes
 Build-Depends: cmake,
                debhelper (>= 8),
                kdelibs5-dev,
