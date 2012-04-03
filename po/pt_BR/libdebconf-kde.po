@@ -2,27 +2,28 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2010.
+# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: libdebconf-kde\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:04+0200\n"
-"PO-Revision-Date: 2010-12-03 01:09-0200\n"
+"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"PO-Revision-Date: 2011-07-07 00:58-0300\n"
 "Last-Translator: André Marcelo Alvarenga <andrealvarenga@gmx.net>\n"
-"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@mail.kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: src/DebconfGui.cpp:121
+#: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf no %1"
 
-#: src/DebconfGui.cpp:219
+#: src/DebconfGui.cpp:234
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -31,17 +32,21 @@ msgstr ""
 "<b>Não implementado</b>: O widget de entrada para o tipo de dados '%1' não "
 "está implementado. Será usado o padrão '%2'."
 
-#: tools/main.cpp:34
+#: tools/main.cpp:38
 msgid "Debconf KDE"
 msgstr "Debconf para KDE"
 
-#: tools/main.cpp:36
+#: tools/main.cpp:40
 msgid "Debconf frontend for KDE"
 msgstr "Interface do Debconf para o KDE"
 
-#: tools/main.cpp:42
+#: tools/main.cpp:46
 msgid "Path to where the socket should be created"
 msgstr "O caminho onde deseja criar o socket"
+
+#: tools/main.cpp:47
+msgid "FIFO file descriptors for communication with Debconf"
+msgstr "Descritores de arquivos FIFO para comunicação com o Debconf"
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"

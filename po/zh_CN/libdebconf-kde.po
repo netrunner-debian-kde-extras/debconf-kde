@@ -1,18 +1,21 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ni Hui <shuizhuyuanluo@126.com>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: libdebconf-kde\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
 "POT-Creation-Date: 2011-08-02 05:05+0200\n"
-"PO-Revision-Date: 2010-08-02 23:54-0700\n"
-"Last-Translator: Japanese KDE translation team <Kdeveloper@kde.gr.jp>\n"
-"Language-Team: Japanese <Kdeveloper@kde.gr.jp>\n"
-"Language: ja\n"
+"PO-Revision-Date: 2011-12-04 15:34+0800\n"
+"Last-Translator: Ni Hui <shuizhuyuanluo@126.com>\n"
+"Language-Team: Chinese Simplified <kde-china@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/DebconfGui.cpp:136
 #, kde-format
@@ -45,24 +48,24 @@ msgstr ""
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "KDE 中国"
 
 #: rc.cpp:2
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "kde-china@kde.org"
 
 #. i18n: file: src/DebconfBoolean.ui:48
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton)
 #: rc.cpp:5
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #. i18n: file: src/DebconfBoolean.ui:64
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #: rc.cpp:8
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #. i18n: file: src/DebconfError.ui:23
 #. i18n: ectx: property (text), widget (QLabel, iconL)
@@ -70,22 +73,22 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QLabel, iconL)
 #: rc.cpp:11 rc.cpp:14
 msgid "Icon"
-msgstr ""
+msgstr "图标"
 
 #. i18n: file: src/DebconfGui.ui:83
 #. i18n: ectx: property (text), widget (KPushButton, cancelPB)
 #: rc.cpp:17
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #. i18n: file: src/DebconfGui.ui:93
 #. i18n: ectx: property (text), widget (KPushButton, backPB)
 #: rc.cpp:20
 msgid "Back"
-msgstr ""
+msgstr "后退"
 
 #. i18n: file: src/DebconfGui.ui:100
 #. i18n: ectx: property (text), widget (KPushButton, nextPB)
 #: rc.cpp:23
 msgid "Continue"
-msgstr ""
+msgstr "继续"

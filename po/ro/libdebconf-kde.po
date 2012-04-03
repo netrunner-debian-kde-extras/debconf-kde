@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-05-12 04:04+0200\n"
+"POT-Creation-Date: 2011-08-02 05:05+0200\n"
 "PO-Revision-Date: 2011-01-14 11:13+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,31 +18,35 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 
-#: src/DebconfGui.cpp:121
+#: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf pe %1"
 
-#: src/DebconfGui.cpp:219
+#: src/DebconfGui.cpp:234
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 msgstr ""
-"<b>Neimplementat</b>: Controlul grafic de introducere pentru tipul de date „%"
-"1” nu este implementat. Se va folosi implicit „%2”."
+"<b>Neimplementat</b>: Controlul grafic de introducere pentru tipul de date "
+"„%1” nu este implementat. Se va folosi implicit „%2”."
 
-#: tools/main.cpp:34
+#: tools/main.cpp:38
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:36
+#: tools/main.cpp:40
 msgid "Debconf frontend for KDE"
 msgstr "Interfață Debconf pentru KDE"
 
-#: tools/main.cpp:42
+#: tools/main.cpp:46
 msgid "Path to where the socket should be created"
 msgstr "Calea la care să fie creat soclul"
+
+#: tools/main.cpp:47
+msgid "FIFO file descriptors for communication with Debconf"
+msgstr ""
 
 #: rc.cpp:1
 msgctxt "NAME OF TRANSLATORS"
