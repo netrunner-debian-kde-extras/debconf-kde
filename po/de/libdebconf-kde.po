@@ -2,9 +2,9 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2011.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libdebconf-kde\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"POT-Creation-Date: 2012-10-24 04:13+0200\n"
 "PO-Revision-Date: 2011-07-31 18:11+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -15,12 +15,35 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/DebconfGui.cpp:136
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frederik Schwarzer"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "schwarzer@kde.org"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#: src/DebconfBoolean.ui:48
+msgid "Yes"
+msgstr "Ja"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#: src/DebconfBoolean.ui:64
+msgid "No"
+msgstr "Nein"
+
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#: src/DebconfError.ui:23 src/DebconfGui.ui:44
+msgid "Icon"
+msgstr "Symbol"
+
+#: src/DebconfGui.cpp:141
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf auf %1"
 
-#: src/DebconfGui.cpp:234
+#: src/DebconfGui.cpp:239
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -28,6 +51,21 @@ msgid ""
 msgstr ""
 "<b>Nicht implementiert</b>: Das Eingabe-Bedienelement für den Datentyp '%1' "
 "ist nicht implementiert. Standard von „%2“ wird verwendet."
+
+#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
+#: src/DebconfGui.ui:83
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. i18n: ectx: property (text), widget (KPushButton, backPB)
+#: src/DebconfGui.ui:93
+msgid "Back"
+msgstr "Zurück"
+
+#. i18n: ectx: property (text), widget (KPushButton, nextPB)
+#: src/DebconfGui.ui:100
+msgid "Continue"
+msgstr "Fortfahren"
 
 #: tools/main.cpp:38
 msgid "Debconf KDE"
@@ -44,60 +82,3 @@ msgstr "Pfad, an dem der Socket erstellt werden soll"
 #: tools/main.cpp:47
 msgid "FIFO file descriptors for communication with Debconf"
 msgstr "FIFO-Dateideskriptoren zur Kommunikation mit Debconf"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Frederik Schwarzer"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "schwarzer@kde.org"
-
-#. i18n: file: src/DebconfBoolean.ui:48
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: rc.cpp:5
-msgid "Yes"
-msgstr "Ja"
-
-#. i18n: file: src/DebconfBoolean.ui:64
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: rc.cpp:8
-msgid "No"
-msgstr "Nein"
-
-#. i18n: file: src/DebconfError.ui:23
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#. i18n: file: src/DebconfGui.ui:44
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: rc.cpp:11 rc.cpp:14
-msgid "Icon"
-msgstr "Symbol"
-
-#. i18n: file: src/DebconfGui.ui:83
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: rc.cpp:17
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#. i18n: file: src/DebconfGui.ui:93
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: rc.cpp:20
-msgid "Back"
-msgstr "Zurück"
-
-#. i18n: file: src/DebconfGui.ui:100
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: rc.cpp:23
-msgid "Continue"
-msgstr "Fortfahren"
-
-#~ msgid "Form"
-#~ msgstr "Form"
-
-#~ msgid "Label"
-#~ msgstr "Label"
-
-#~ msgid "TextLabel"
-#~ msgstr "TextLabel"
