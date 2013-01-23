@@ -2,7 +2,8 @@ Source: debconf-kde
 Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Matthias Klumpp <matthias@tenstral.net>
+Uploaders: Matthias Klumpp <matthias@tenstral.net>,
+ José Manuel Santamaría Lema <panfaust@gmail.com>
 DM-Upload-Allowed: yes
 Build-Depends: cmake,
                debhelper (>= 9),

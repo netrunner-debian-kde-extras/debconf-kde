@@ -1,6 +1,7 @@
 debconf-kde (0.3-0r0) UNRELEASED; urgency=low
 
   * New upstream release.
+  * Add myself to Uploaders.
 
  -- José Manuel Santamaría Lema <panfaust@gmail.com>  Wed, 23 Jan 2013 11:34:58 +0100
 
