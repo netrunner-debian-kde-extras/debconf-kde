@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"POT-Creation-Date: 2012-10-24 04:13+0200\n"
 "PO-Revision-Date: 2011-08-24 17:27+0400\n"
 "Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -23,12 +23,35 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: src/DebconfGui.cpp:136
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Александр Вольф"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alex.v.wolf@gmail.com"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#: src/DebconfBoolean.ui:48
+msgid "Yes"
+msgstr "Да"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#: src/DebconfBoolean.ui:64
+msgid "No"
+msgstr "Нет"
+
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#: src/DebconfError.ui:23 src/DebconfGui.ui:44
+msgid "Icon"
+msgstr "Значок"
+
+#: src/DebconfGui.cpp:141
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf на %1"
 
-#: src/DebconfGui.cpp:234
+#: src/DebconfGui.cpp:239
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -36,6 +59,21 @@ msgid ""
 msgstr ""
 "<b>Не реализовано</b>: Виджет для ввода данных типа «%1» нереализован. По "
 "умолчанию будет использоваться «%2»."
+
+#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
+#: src/DebconfGui.ui:83
+msgid "Cancel"
+msgstr "Отмена"
+
+#. i18n: ectx: property (text), widget (KPushButton, backPB)
+#: src/DebconfGui.ui:93
+msgid "Back"
+msgstr "Назад"
+
+#. i18n: ectx: property (text), widget (KPushButton, nextPB)
+#: src/DebconfGui.ui:100
+msgid "Continue"
+msgstr "Далее"
 
 #: tools/main.cpp:38
 msgid "Debconf KDE"
@@ -52,60 +90,3 @@ msgstr "Путь, по которому должен быть создан со�
 #: tools/main.cpp:47
 msgid "FIFO file descriptors for communication with Debconf"
 msgstr "Дескрипторы файлов FIFO для обмена данными с Debconf"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Александр Вольф"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "alex.v.wolf@gmail.com"
-
-#. i18n: file: src/DebconfBoolean.ui:48
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: rc.cpp:5
-msgid "Yes"
-msgstr "Да"
-
-#. i18n: file: src/DebconfBoolean.ui:64
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: rc.cpp:8
-msgid "No"
-msgstr "Нет"
-
-#. i18n: file: src/DebconfError.ui:23
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#. i18n: file: src/DebconfGui.ui:44
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: rc.cpp:11 rc.cpp:14
-msgid "Icon"
-msgstr "Значок"
-
-#. i18n: file: src/DebconfGui.ui:83
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: rc.cpp:17
-msgid "Cancel"
-msgstr "Отмена"
-
-#. i18n: file: src/DebconfGui.ui:93
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: rc.cpp:20
-msgid "Back"
-msgstr "Назад"
-
-#. i18n: file: src/DebconfGui.ui:100
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: rc.cpp:23
-msgid "Continue"
-msgstr "Далее"
-
-#~ msgid "Form"
-#~ msgstr "Из"
-
-#~ msgid "Label"
-#~ msgstr "Метка"
-
-#~ msgid "TextLabel"
-#~ msgstr "Название"
