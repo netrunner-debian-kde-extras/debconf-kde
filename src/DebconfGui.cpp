@@ -105,11 +105,6 @@ DebconfGui::DebconfGui(int readfd, int writefd, QWidget *parent)
     init();
 }
 
-DebconfGui::~DebconfGui()
-{
-    delete d_ptr;
-}
-
 void DebconfGui::init()
 {
     Q_D(DebconfGui);
