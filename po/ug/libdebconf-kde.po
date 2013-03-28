@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libdebconf-kde\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-24 04:13+0200\n"
+"POT-Creation-Date: 2011-08-02 05:05+0200\n"
 "PO-Revision-Date: 2011-05-09 19:00+0900\n"
 "Last-Translator: Sahran <sahran@live.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -17,55 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
-
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: src/DebconfBoolean.ui:48
-msgid "Yes"
-msgstr "ھەئە"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: src/DebconfBoolean.ui:64
-msgid "No"
-msgstr "ياق"
-
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: src/DebconfError.ui:23 src/DebconfGui.ui:44
-msgid "Icon"
-msgstr "سىنبەلگە"
-
-#: src/DebconfGui.cpp:141
+#: src/DebconfGui.cpp:136
 #, kde-format
 msgid "Debconf on %1"
 msgstr ""
 
-#: src/DebconfGui.cpp:239
+#: src/DebconfGui.cpp:234
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 msgstr ""
-
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: src/DebconfGui.ui:83
-msgid "Cancel"
-msgstr "ئەمەلدىن قالدۇرۇش"
-
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: src/DebconfGui.ui:93
-msgid "Back"
-msgstr "كەينى"
-
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: src/DebconfGui.ui:100
-msgid "Continue"
-msgstr "داۋاملاشتۇر"
 
 #: tools/main.cpp:38
 msgid "Debconf KDE"
@@ -82,3 +44,51 @@ msgstr ""
 #: tools/main.cpp:47
 msgid "FIFO file descriptors for communication with Debconf"
 msgstr ""
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+
+#. i18n: file: src/DebconfBoolean.ui:48
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#: rc.cpp:5
+msgid "Yes"
+msgstr "ھەئە"
+
+#. i18n: file: src/DebconfBoolean.ui:64
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#: rc.cpp:8
+msgid "No"
+msgstr "ياق"
+
+#. i18n: file: src/DebconfError.ui:23
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#. i18n: file: src/DebconfGui.ui:44
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#: rc.cpp:11 rc.cpp:14
+msgid "Icon"
+msgstr "سىنبەلگە"
+
+#. i18n: file: src/DebconfGui.ui:83
+#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
+#: rc.cpp:17
+msgid "Cancel"
+msgstr "ئەمەلدىن قالدۇرۇش"
+
+#. i18n: file: src/DebconfGui.ui:93
+#. i18n: ectx: property (text), widget (KPushButton, backPB)
+#: rc.cpp:20
+msgid "Back"
+msgstr "كەينى"
+
+#. i18n: file: src/DebconfGui.ui:100
+#. i18n: ectx: property (text), widget (KPushButton, nextPB)
+#: rc.cpp:23
+msgid "Continue"
+msgstr "داۋاملاشتۇر"
