@@ -171,6 +171,14 @@ private:
     void cmd_subst(const QString &param);
     void cmd_progress(const QString &param);
     void cmd_x_ping(const QString &param);
+    void cmd_version(const QString &param);
+    void cmd_x_loadtemplatefile(const QString &param);
+    void cmd_info(const QString &param);
+    void cmd_fget(const QString &param);
+    void cmd_fset(const QString &param);
+    void cmd_beginblock(const QString &param);
+    void cmd_endblock(const QString &param);
+    void cmd_stop(const QString &param);
     struct Cmd {
         const char *cmd;
         void (DebconfFrontend::*run)(const QString &);
@@ -187,10 +195,12 @@ private:
 
     typedef QHash<PropertyKey, QString> Properties;
     typedef QHash<QString, QString> Substitutions;
+    typedef QHash<QString, bool> Flags;
 
     QHash<QString, Properties>    m_data;
     QHash<QString, Substitutions> m_subst;
     QHash<QString, QString>       m_values;
+    QHash<QString, Flags>         m_flags;
     QString m_title;
     QStringList m_input;
 };
