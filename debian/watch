@@ -1,0 +1,5 @@
+version=3
+
+opts=pasv \
+  ftp://ftp.kde.org/pub/kde/stable/libdebconf-kde/([\d\.]+)/src/libdebconf-kde-([\d\.]+)\.tar\.bz2 \
+  debian git-import-orig
