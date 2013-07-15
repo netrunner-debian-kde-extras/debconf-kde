@@ -1,7 +1,10 @@
 #!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+#export DH_VERBOSE=1
 
 %:
-	dh $@ --parallel --with kde --dbg-package=debconf-kde-dbg
+	dh $@ --parallel --with kde --with pkgkde_symbolshelper --dbg-package=debconf-kde-dbg
 
 override_dh_install:
 	dh_install --list-missing
