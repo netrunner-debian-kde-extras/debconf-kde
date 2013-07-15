@@ -27,3 +27,6 @@ include_directories(
 add_subdirectory(cmake)
 add_subdirectory(src)
 add_subdirectory(tools)
+
+include(MacroOptionalAddSubdirectory)
+macro_optional_add_subdirectory( po )

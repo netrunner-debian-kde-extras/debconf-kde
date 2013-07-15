@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2011-08-02 05:05+0200\n"
+"POT-Creation-Date: 2012-10-24 04:13+0200\n"
 "PO-Revision-Date: 2011-07-08 08:57+0800\n"
 "Last-Translator: Franklin Weng <franklin@goodhorse.idv.tw>\n"
 "Language-Team: Chinese Traditional <zh-l10n@linux.org.tw>\n"
@@ -18,17 +18,55 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src/DebconfGui.cpp:136
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Frank Weng (a.k.a. Franklin)"
+
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "franklin at goodhorse dot idv dot tw"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
+#: src/DebconfBoolean.ui:48
+msgid "Yes"
+msgstr "是"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#: src/DebconfBoolean.ui:64
+msgid "No"
+msgstr "否"
+
+#. i18n: ectx: property (text), widget (QLabel, iconL)
+#: src/DebconfError.ui:23 src/DebconfGui.ui:44
+msgid "Icon"
+msgstr "圖示"
+
+#: src/DebconfGui.cpp:141
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf 於 %1"
 
-#: src/DebconfGui.cpp:234
+#: src/DebconfGui.cpp:239
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 msgstr "<b>未實作</b>：資料型態 %1 的輸入元件未實作。將使用 %2 的預設。"
+
+#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
+#: src/DebconfGui.ui:83
+msgid "Cancel"
+msgstr "取消"
+
+#. i18n: ectx: property (text), widget (KPushButton, backPB)
+#: src/DebconfGui.ui:93
+msgid "Back"
+msgstr "返回"
+
+#. i18n: ectx: property (text), widget (KPushButton, nextPB)
+#: src/DebconfGui.ui:100
+msgid "Continue"
+msgstr "繼續"
 
 #: tools/main.cpp:38
 msgid "Debconf KDE"
@@ -45,57 +83,3 @@ msgstr "socket 要建立的路徑"
 #: tools/main.cpp:47
 msgid "FIFO file descriptors for communication with Debconf"
 msgstr "與 Debconf 聯繫用的 FIFO 檔案描述子"
-
-#: rc.cpp:1
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Frank Weng (a.k.a. Franklin)"
-
-#: rc.cpp:2
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "franklin at goodhorse dot idv dot tw"
-
-#. i18n: file: src/DebconfBoolean.ui:48
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: rc.cpp:5
-msgid "Yes"
-msgstr "是"
-
-#. i18n: file: src/DebconfBoolean.ui:64
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: rc.cpp:8
-msgid "No"
-msgstr "否"
-
-#. i18n: file: src/DebconfError.ui:23
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#. i18n: file: src/DebconfGui.ui:44
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: rc.cpp:11 rc.cpp:14
-msgid "Icon"
-msgstr "圖示"
-
-#. i18n: file: src/DebconfGui.ui:83
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: rc.cpp:17
-msgid "Cancel"
-msgstr "取消"
-
-#. i18n: file: src/DebconfGui.ui:93
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: rc.cpp:20
-msgid "Back"
-msgstr "返回"
-
-#. i18n: file: src/DebconfGui.ui:100
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: rc.cpp:23
-msgid "Continue"
-msgstr "繼續"
-
-#~ msgid "Form"
-#~ msgstr "表單"
-
-#~ msgid "Label"
-#~ msgstr "標籤"

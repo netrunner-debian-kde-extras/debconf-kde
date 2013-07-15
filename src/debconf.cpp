@@ -74,8 +74,6 @@ const DebconfFrontend::Cmd DebconfFrontend::commands[] = {
     { "CAPB", &DebconfFrontend::cmd_capb },
     { "PROGRESS", &DebconfFrontend::cmd_progress },
     { "X_PING", &DebconfFrontend::cmd_x_ping },
-<<<<<<< HEAD
-=======
     { "VERSION", &DebconfFrontend::cmd_version },
     { "X_LOADTEMPLATEFILE", &DebconfFrontend::cmd_x_loadtemplatefile },
     { "INFO", &DebconfFrontend::cmd_info },
@@ -84,7 +82,6 @@ const DebconfFrontend::Cmd DebconfFrontend::commands[] = {
     { "BEGINBLOCK", &DebconfFrontend::cmd_beginblock },
     { "ENDBLOCK", &DebconfFrontend::cmd_endblock },
     { "STOP", &DebconfFrontend::cmd_stop },
->>>>>>> upstream/0.3
     { 0, 0 } };
 
 DebconfFrontend::DebconfFrontend(QObject *parent)
@@ -167,15 +164,11 @@ QString DebconfFrontend::substitute(const QString &key, const QString &rest) con
 {
     Substitutions sub = m_subst[key];
     QString result, var, escape;
-    QRegExp rx(QLatin1String( "^(.*?)(\\\\)?\\$\\{([^{}]+)\\}(.*)$" ));
+    QRegExp rx(QLatin1String( "^(.*)(\\\\)?\\$\\{([^\\{\\}]+)\\}(.*)$" ));
     QString last(rest);
-<<<<<<< HEAD
-    while (rx.indexIn(rest) != -1) {
-=======
     int pos = 0;
     while ( (pos = rx.indexIn(rest, pos)) != -1) {
         kDebug() << "var found! at" << pos;
->>>>>>> upstream/0.3
         result += rx.cap(1);
         escape = rx.cap(2);
         var = rx.cap(3);
@@ -185,6 +178,7 @@ QString DebconfFrontend::substitute(const QString &key, const QString &rest) con
         } else {
             result += sub.value(var);
         }
+        pos += rx.matchedLength();
     }
     return result + last;
 }
@@ -304,8 +298,6 @@ void DebconfFrontend::cmd_x_ping(const QString &param)
     say(QLatin1String( "0 pong" ));
 }
 
-<<<<<<< HEAD
-=======
 void DebconfFrontend::cmd_version(const QString &param)
 {
     if ( !param.isEmpty() ) {
@@ -441,7 +433,6 @@ void DebconfFrontend::cmd_stop(const QString &param)
      //Do nothing.
 }
 
->>>>>>> upstream/0.3
 bool DebconfFrontend::process()
 {
     QTextStream in(getReadDevice());
