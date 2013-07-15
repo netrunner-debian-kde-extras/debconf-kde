@@ -74,6 +74,17 @@ const DebconfFrontend::Cmd DebconfFrontend::commands[] = {
     { "CAPB", &DebconfFrontend::cmd_capb },
     { "PROGRESS", &DebconfFrontend::cmd_progress },
     { "X_PING", &DebconfFrontend::cmd_x_ping },
+<<<<<<< HEAD
+=======
+    { "VERSION", &DebconfFrontend::cmd_version },
+    { "X_LOADTEMPLATEFILE", &DebconfFrontend::cmd_x_loadtemplatefile },
+    { "INFO", &DebconfFrontend::cmd_info },
+    { "FGET", &DebconfFrontend::cmd_fget },
+    { "FSET", &DebconfFrontend::cmd_fset },
+    { "BEGINBLOCK", &DebconfFrontend::cmd_beginblock },
+    { "ENDBLOCK", &DebconfFrontend::cmd_endblock },
+    { "STOP", &DebconfFrontend::cmd_stop },
+>>>>>>> upstream/0.3
     { 0, 0 } };
 
 DebconfFrontend::DebconfFrontend(QObject *parent)
@@ -141,6 +152,7 @@ void DebconfFrontend::reset()
     m_data.clear();
     m_subst.clear();
     m_values.clear();
+    m_flags.clear();
 }
 
 void DebconfFrontend::say(const QString &string)
@@ -157,7 +169,13 @@ QString DebconfFrontend::substitute(const QString &key, const QString &rest) con
     QString result, var, escape;
     QRegExp rx(QLatin1String( "^(.*?)(\\\\)?\\$\\{([^{}]+)\\}(.*)$" ));
     QString last(rest);
+<<<<<<< HEAD
     while (rx.indexIn(rest) != -1) {
+=======
+    int pos = 0;
+    while ( (pos = rx.indexIn(rest, pos)) != -1) {
+        kDebug() << "var found! at" << pos;
+>>>>>>> upstream/0.3
         result += rx.cap(1);
         escape = rx.cap(2);
         var = rx.cap(3);
@@ -250,7 +268,7 @@ void DebconfFrontend::cmd_title(const QString &param)
 
 void DebconfFrontend::cmd_data(const QString &param)
 {
-    // We get scrings like
+    // We get strings like
     // aiccu/brokername description Tunnel broker:
     // item = "aiccu/brokername"
     // type = "description"
@@ -266,7 +284,7 @@ void DebconfFrontend::cmd_data(const QString &param)
 
 void DebconfFrontend::cmd_subst(const QString &param)
 {
-    // We get scrings like
+    // We get strings like
     // aiccu/brokername brokers AARNet, Hexago / Freenet6, SixXS, Wanadoo France
     // item = "aiccu/brokername"
     // type = "brokers"
@@ -286,6 +304,144 @@ void DebconfFrontend::cmd_x_ping(const QString &param)
     say(QLatin1String( "0 pong" ));
 }
 
+<<<<<<< HEAD
+=======
+void DebconfFrontend::cmd_version(const QString &param)
+{
+    if ( !param.isEmpty() ) {
+        QString major_version_str = param.section(QLatin1Char( '.' ), 0, 0);
+        bool ok = false;
+        int major_version = major_version_str.toInt( &ok );
+        if ( !ok || (major_version != 2) ) {
+            say(QLatin1String( "30 wrong or too old protocol version" ));
+            return;
+        }
+    }
+    //This debconf frontend is suposed to use the version 2.1 of the protocol.
+    say(QLatin1String( "0 2.1" ));
+}
+
+void DebconfFrontend::cmd_x_loadtemplatefile(const QString &param)
+{
+    QFile template_file(param);
+    if (template_file.open(QFile::ReadOnly)) {
+        QTextStream template_stream(&template_file);
+        QString line = QLatin1String("");
+        int linecount = 0;
+        QHash <QString,QString> field_short_value;
+        QHash <QString,QString> field_long_value;
+	QString last_field_name;
+        while ( !line.isNull() ) {
+            ++linecount;
+            line = template_stream.readLine();
+            kDebug() << linecount << line;
+            if ( line.isEmpty() ) {
+                if (!last_field_name.isEmpty()) {
+                    //Submit last block values.
+                    kDebug() << "submit" << last_field_name;
+                    QString item = field_short_value[QLatin1String("template")];
+                    QString type = field_short_value[QLatin1String("type")];
+                    QString short_description = field_short_value[QLatin1String("description")];
+                    QString long_description = field_long_value[QLatin1String("description")];
+
+                    m_data[item][DebconfFrontend::Type] = type;
+                    m_data[item][DebconfFrontend::Description] = short_description;
+                    m_data[item][DebconfFrontend::ExtendedDescription] = long_description;
+                    
+                    //Clear data.
+                    field_short_value.clear();
+                    field_long_value.clear();
+                    last_field_name.clear();
+                }
+            } else {
+                if (!line.startsWith(QLatin1Char(' '))) {
+                    last_field_name = line.section(QLatin1String(": "), 0, 0).toLower();
+                    field_short_value[last_field_name] = line.section(QLatin1String(": "), 1);
+                } else {
+		    if ( field_long_value[last_field_name].isEmpty() ){
+                        field_long_value[last_field_name] = line.remove(0, 1);
+                    } else {
+                        field_long_value[last_field_name].append(QLatin1Char('\n'));
+                        if ( !(line.trimmed() == QLatin1String(".")) ) {
+			    field_long_value[last_field_name].append(line.remove(0, 1));
+                        }
+                    }
+                }
+            }
+        }
+    } else {
+        say(QLatin1String( "30 couldn't open file" ));
+        return;
+    }
+    say(QLatin1String( "0 ok" ));
+}
+
+void DebconfFrontend::cmd_info(const QString &param)
+{
+    Q_UNUSED(param)
+    //FIXME: this is a dummy command, we should actually do something
+    //with param.
+    say(QLatin1String( "0 ok" ));
+}
+
+void DebconfFrontend::cmd_fget(const QString &param)
+{
+    // We get strings like
+    // foo/bar seen false
+    // question = "foo/bar"
+    // flag = "seen"
+    QString question = param.section(QLatin1Char( ' ' ), 0, 0);
+    QString flag = param.section(QLatin1Char( ' ' ), 1, 1);
+
+    if (m_flags[question][flag]) {
+        say( QLatin1String("0 true") );
+    } else {
+        say( QLatin1String("0 false") );
+    }
+}
+
+void DebconfFrontend::cmd_fset(const QString &param)
+{
+    // We get strings like
+    // foo/bar seen false
+    // question = "foo/bar"
+    // flag = "seen"
+    // value = "false"
+    QString question = param.section(QLatin1Char( ' ' ), 0, 0);
+    QString flag = param.section(QLatin1Char( ' ' ), 1, 1);
+    QString value = param.section(QLatin1Char( ' ' ), 2, 2);
+
+    if ( value == QLatin1String("false") ) {
+        m_flags[question][flag] = false;
+    } else {
+        m_flags[question][flag] = true;
+    }
+    say(QLatin1String( "0 ok" ));
+}
+
+void DebconfFrontend::cmd_beginblock(const QString &param)
+{
+    Q_UNUSED(param)
+    //FIXME: this is a dummy command, we should actually do something
+    //with param.
+    say(QLatin1String( "0 ok" ));
+}
+
+void DebconfFrontend::cmd_endblock(const QString &param)
+{
+    Q_UNUSED(param)
+    //FIXME: this is a dummy command, we should actually do something
+    //with param.
+    say(QLatin1String( "0 ok" ));
+}
+
+void DebconfFrontend::cmd_stop(const QString &param)
+{
+     Q_UNUSED(param)
+     //Do nothing.
+}
+
+>>>>>>> upstream/0.3
 bool DebconfFrontend::process()
 {
     QTextStream in(getReadDevice());

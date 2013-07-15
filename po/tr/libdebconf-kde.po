@@ -7,10 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2011-08-02 05:05+0200\n"
 "PO-Revision-Date: 2011-01-11 12:18+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
+=======
+"POT-Creation-Date: 2012-10-24 04:13+0200\n"
+"PO-Revision-Date: 2012-06-28 08:28+0300\n"
+"Last-Translator: Serdar Soytetir <tulliana@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+>>>>>>> upstream/0.3
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

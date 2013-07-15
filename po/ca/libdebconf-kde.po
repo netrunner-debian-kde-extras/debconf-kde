@@ -1,5 +1,5 @@
 # Translation of libdebconf-kde.po to Catalan
-# Copyright (C) 2010 This_file_is_part_of_KDE
+# Copyright (C) 2010-2011 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2 or later.
 #
 # Josep Ma. Ferrer <txemaq@gmail.com>, 2010, 2011.
