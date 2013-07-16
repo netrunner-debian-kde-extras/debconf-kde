@@ -1,11 +1,11 @@
-debconf-kde (0.3-1~1.gbpa40144) UNRELEASED; urgency=low
-
-  ** SNAPSHOT build **
+debconf-kde (0.3-1) unstable; urgency=low
 
   * New upstream release: 0.3
   * Change mail to my Debian address
   * Bump standards version
   * Add watch file
+  * Compile with pkgkde_symbolshelper
+  * Use canonical Git url
 
  -- Matthias Klumpp <mak@debian.org>  Tue, 16 Jul 2013 18:24:06 +0200
 
