@@ -5,16 +5,21 @@ Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Matthias Klumpp <mak@debian.org>
 Build-Depends: cmake,
                debhelper (>= 9),
-               kdelibs5-dev,
+               extra-cmake-modules,
+               libkf5coreaddons-dev,
+               libkf5i18n-dev,
+               libkf5iconthemes-dev,
+               libkf5textwidgets-dev,
                pkg-kde-tools (>= 0.5.0)
 Standards-Version: 3.9.4
 Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/debconf-kde.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/debconf-kde.git
 
-Package: libdebconf-kde0
+Package: libdebconf-kde1
 Section: libs
 Architecture: any
+Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends}
 Description: Debconf KDE GUI library
@@ -30,7 +35,7 @@ Description: Debconf KDE GUI library
 Package: libdebconf-kde-dev
 Section: libdevel
 Architecture: any
-Depends: libdebconf-kde0 (= ${binary:Version}),
+Depends: libdebconf-kde1 (= ${binary:Version}),
          ${misc:Depends}
 Description: Development headers for the Debconf KDE library
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
@@ -61,9 +66,9 @@ Package: debconf-kde-dbg
 Section: debug
 Architecture: any
 Priority: extra
-Depends: libdebconf-kde0 (= ${binary:Version}),
+Multi-Arch: foreign
+Depends: libdebconf-kde1 (= ${binary:Version}),
          ${misc:Depends}
-Recommends: kdelibs5-dbg
 Conflicts: libdebconf-kde-dbg
 Replaces: libdebconf-kde-dbg
 Description: Debconf KDE debugging symbols
