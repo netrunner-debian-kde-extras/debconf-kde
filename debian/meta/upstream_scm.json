@@ -1,0 +1,5 @@
+{
+    "type" : "git",
+    "url" : "git://anongit.kde.org/libdebconf-kde.git",
+    "branch" : "frameworks"
+}
