@@ -1,5 +1,6 @@
-debconf-kde (0.9-0ubuntu1) UNRELEASED; urgency=medium
+debconf-kde (1.0.0-0ubuntu1) UNRELEASED; urgency=medium
 
+  * New upstream release
   * KDE Frameworks 5 Port
 
  -- Harald Sitter <apachelogger@kubuntu.org>  Wed, 12 Nov 2014 14:09:36 +0100
