@@ -21,7 +21,9 @@ Package: libdebconf-kde1
 Section: libs
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: debconf-kde-data (= ${source:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Description: Debconf KDE GUI library
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
  applications.
@@ -59,6 +61,19 @@ Description: Debconf KDE GUI frontend tool
  .
  This package contains a small standalone tool to display a KDE Debconf
  dialog without linking against the Debconf KDE library.
+
+Package: debconf-kde-data
+Architecture: all
+Depends: ${misc:Depends}
+Description: Debconf KDE data files
+ Debconf KDE is a GUI library for including Debconf frontends in Qt-based
+ applications.
+ Debconf is a configuration management system for Debian packages, which
+ is used to ask questions when they are installed.
+ This library is written in C++ and used by Apper and Muon to
+ embed Debconf dialogs.
+ .
+ This package contains the data files needed by the Debconf KDE library
 
 Package: debconf-kde-dbg
 Section: debug
