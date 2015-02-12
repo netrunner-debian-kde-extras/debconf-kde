@@ -1,12 +1,17 @@
-debconf-kde (1.0.0-0ubuntu2) UNRELEASED; urgency=medium
+debconf-kde (1.0.1-0ubuntu1) vivid; urgency=medium
 
+  [ José Manuel Santamaría Lema ]
   * Build depend on pkg-kde-tools to (>> 0.15.15) so we make sure we are
     building against a pkg-kde-tools which provides the kde frameworks 
     module.
   * Add debconf-kde-data package to provide architecture independent data (at
     the moment, the translations).
 
- -- José Manuel Santamaría Lema <panfaust@gmail.com>  Tue, 10 Feb 2015 14:24:26 +0100
+  [ Harald Sitter ]
+  * New upstream release (LP: #1420291)
+  * Update standards version to latest (3.9.6)
+
+ -- Harald Sitter <sitter@kde.org>  Thu, 12 Feb 2015 08:29:01 +0100
 
 debconf-kde (1.0.0-0ubuntu1) vivid; urgency=medium
 
