@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-24 04:13+0200\n"
+"POT-Creation-Date: 2014-12-20 07:50+0000\n"
 "PO-Revision-Date: 2011-08-24 17:27+0400\n"
 "Last-Translator: Yuri Efremov <yur.arh@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -31,27 +31,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alex.v.wolf@gmail.com"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: src/DebconfBoolean.ui:48
-msgid "Yes"
-msgstr "Да"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: src/DebconfBoolean.ui:64
-msgid "No"
-msgstr "Нет"
-
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: src/DebconfError.ui:23 src/DebconfGui.ui:44
-msgid "Icon"
-msgstr "Значок"
-
-#: src/DebconfGui.cpp:141
+#: src/DebconfGui.cpp:147
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf на %1"
 
-#: src/DebconfGui.cpp:239
+#: src/DebconfGui.cpp:245
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -60,33 +45,40 @@ msgstr ""
 "<b>Не реализовано</b>: Виджет для ввода данных типа «%1» нереализован. По "
 "умолчанию будет использоваться «%2»."
 
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: src/DebconfGui.ui:83
-msgid "Cancel"
-msgstr "Отмена"
-
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: src/DebconfGui.ui:93
-msgid "Back"
-msgstr "Назад"
-
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: src/DebconfGui.ui:100
-msgid "Continue"
-msgstr "Далее"
-
-#: tools/main.cpp:38
+#: tools/main.cpp:42
+#, fuzzy
+#| msgid "Debconf KDE"
+msgctxt "@title"
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:40
+#: tools/main.cpp:44
+#, fuzzy
+#| msgid "Debconf frontend for KDE"
+msgctxt "@info"
 msgid "Debconf frontend for KDE"
 msgstr "Интерфейс Debconf для KDE"
 
-#: tools/main.cpp:46
+#: tools/main.cpp:52
+#, fuzzy
+#| msgid "Path to where the socket should be created"
+msgctxt "@info:shell"
 msgid "Path to where the socket should be created"
 msgstr "Путь, по которому должен быть создан сокет"
 
-#: tools/main.cpp:47
+#: tools/main.cpp:53
+msgctxt "@info:shell value name"
+msgid "path_to_socket"
+msgstr ""
+
+#: tools/main.cpp:57
+#, fuzzy
+#| msgid "FIFO file descriptors for communication with Debconf"
+msgctxt "@info:shell"
 msgid "FIFO file descriptors for communication with Debconf"
 msgstr "Дескрипторы файлов FIFO для обмена данными с Debconf"
+
+#: tools/main.cpp:58
+msgctxt "@info:shell value name"
+msgid "read_fd,write_fd"
+msgstr ""

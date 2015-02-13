@@ -1,13 +1,14 @@
 # Translation of libdebconf-kde.po to Catalan
-# Copyright (C) 2010 This_file_is_part_of_KDE
-# This file is distributed under the license LGPL version 2 or later.
+# Copyright (C) 2010-2011 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
 #
 # Josep Ma. Ferrer <txemaq@gmail.com>, 2010, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: libdebconf-kde\n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-24 04:13+0200\n"
+"POT-Creation-Date: 2014-12-20 07:50+0000\n"
 "PO-Revision-Date: 2011-11-05 16:54+0100\n"
 "Last-Translator: Josep Ma. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -27,27 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "txemaq@gmail.com"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: src/DebconfBoolean.ui:48
-msgid "Yes"
-msgstr "Sí"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: src/DebconfBoolean.ui:64
-msgid "No"
-msgstr "No"
-
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: src/DebconfError.ui:23 src/DebconfGui.ui:44
-msgid "Icon"
-msgstr "Icona"
-
-#: src/DebconfGui.cpp:141
+#: src/DebconfGui.cpp:147
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf a %1"
 
-#: src/DebconfGui.cpp:239
+#: src/DebconfGui.cpp:245
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -56,33 +42,40 @@ msgstr ""
 "<b>Sense implementar</b>: L'estri d'entrada pel tipus de dada «%1» no està "
 "implementat. S'utilitzarà «%2» per defecte."
 
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: src/DebconfGui.ui:83
-msgid "Cancel"
-msgstr "Cancel·la"
-
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: src/DebconfGui.ui:93
-msgid "Back"
-msgstr "Arrere"
-
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: src/DebconfGui.ui:100
-msgid "Continue"
-msgstr "Continua"
-
-#: tools/main.cpp:38
+#: tools/main.cpp:42
+#, fuzzy
+#| msgid "Debconf KDE"
+msgctxt "@title"
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:40
+#: tools/main.cpp:44
+#, fuzzy
+#| msgid "Debconf frontend for KDE"
+msgctxt "@info"
 msgid "Debconf frontend for KDE"
 msgstr "Frontal del Debconf pel KDE"
 
-#: tools/main.cpp:46
+#: tools/main.cpp:52
+#, fuzzy
+#| msgid "Path to where the socket should be created"
+msgctxt "@info:shell"
 msgid "Path to where the socket should be created"
 msgstr "Camí a on s'ha de crear el sòcol"
 
-#: tools/main.cpp:47
+#: tools/main.cpp:53
+msgctxt "@info:shell value name"
+msgid "path_to_socket"
+msgstr ""
+
+#: tools/main.cpp:57
+#, fuzzy
+#| msgid "FIFO file descriptors for communication with Debconf"
+msgctxt "@info:shell"
 msgid "FIFO file descriptors for communication with Debconf"
 msgstr "Descriptors de fitxers FIFO per la comunicació amb el Debconf"
+
+#: tools/main.cpp:58
+msgctxt "@info:shell value name"
+msgid "read_fd,write_fd"
+msgstr ""

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010 Daniel Nicoletti <dantti12@gmail.com>
+ * Copyright (C) 2014 Harald Sitter <sitter@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -17,30 +17,11 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "DebconfString.h"
+#ifndef DEBCONF_DEBUG_H
+#define DEBCONF_DEBUG_H
 
-using namespace DebconfKde;
+#include <QLoggingCategory>
 
-DebconfString::DebconfString(const QString &name, QWidget *parent)
- : DebconfElement(name, parent)
-{
-    setupUi(this);
-}
+Q_DECLARE_LOGGING_CATEGORY(DEBCONF)
 
-DebconfString::~DebconfString()
-{
-}
-
-QString DebconfString::value() const
-{
-    return stringLE->text();
-}
-
-void DebconfString::setString(const QString &extended_description,
-                              const QString &description,
-                              const QString &default_string)
-{
-    extendedDescriptionL->setText(extended_description);
-    descriptionL->setText(description);
-    stringLE->setText(default_string);
-}
+#endif

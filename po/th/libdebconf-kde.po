@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-24 04:13+0200\n"
+"POT-Creation-Date: 2014-12-20 07:50+0000\n"
 "PO-Revision-Date: 2010-12-11 19:37+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -25,27 +25,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "narachai@gmail.com"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: src/DebconfBoolean.ui:48
-msgid "Yes"
-msgstr "ใช่"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: src/DebconfBoolean.ui:64
-msgid "No"
-msgstr "ไม่ใช่"
-
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: src/DebconfError.ui:23 src/DebconfGui.ui:44
-msgid "Icon"
-msgstr "ไอคอน"
-
-#: src/DebconfGui.cpp:141
+#: src/DebconfGui.cpp:147
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf บน %1"
 
-#: src/DebconfGui.cpp:239
+#: src/DebconfGui.cpp:245
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -53,33 +38,38 @@ msgid ""
 msgstr ""
 "<b>ยังไม่รองรับ</b>: ยังไม่รองรับวิดเจ็ตการนำเข้าสำหรับชนิดข้อมูล '%1'จะใช้ค่าปริยายของ '%2'"
 
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: src/DebconfGui.ui:83
-msgid "Cancel"
-msgstr "ยกเลิก"
-
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: src/DebconfGui.ui:93
-msgid "Back"
-msgstr "กลับ"
-
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: src/DebconfGui.ui:100
-msgid "Continue"
-msgstr "ไปต่อ"
-
-#: tools/main.cpp:38
+#: tools/main.cpp:42
+#, fuzzy
+#| msgid "Debconf KDE"
+msgctxt "@title"
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:40
+#: tools/main.cpp:44
+#, fuzzy
+#| msgid "Debconf frontend for KDE"
+msgctxt "@info"
 msgid "Debconf frontend for KDE"
 msgstr "ตัวติดต่อ Debconf สำหรับ KDE"
 
-#: tools/main.cpp:46
+#: tools/main.cpp:52
+#, fuzzy
+#| msgid "Path to where the socket should be created"
+msgctxt "@info:shell"
 msgid "Path to where the socket should be created"
 msgstr "พาธไปยังที่ที่จะสร้างซ็อกเก็ต"
 
-#: tools/main.cpp:47
+#: tools/main.cpp:53
+msgctxt "@info:shell value name"
+msgid "path_to_socket"
+msgstr ""
+
+#: tools/main.cpp:57
+msgctxt "@info:shell"
 msgid "FIFO file descriptors for communication with Debconf"
+msgstr ""
+
+#: tools/main.cpp:58
+msgctxt "@info:shell value name"
+msgid "read_fd,write_fd"
 msgstr ""

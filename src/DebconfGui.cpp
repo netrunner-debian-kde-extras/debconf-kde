@@ -61,16 +61,19 @@
 #include "DebconfSelect.h"
 #include "DebconfString.h"
 #include "DebconfText.h"
+#include "Debug_p.h"
 
+#include <QtCore/QDebug>
 #include <QtCore/QProcess>
 #include <QtCore/QFile>
-#include <QtGui/QLabel>
+#include <QtWidgets/QLabel>
 
-#include <KLocale>
+#include <KGuiItem>
+#include <KIconLoader>
+#include <KLocalizedString>
+#include <KStandardGuiItem>
 
 #include <debconf.h>
-
-#include <KDebug>
 
 using namespace DebconfKde;
 
@@ -116,10 +119,13 @@ void DebconfGui::init()
     d->elementProgress = 0;
     d->parentWidget = 0;
     d->setupUi(this);
+
+    // Setup buttons. They are marked non-translatable in the UI file.
+    KGuiItem::assign(d->cancelPB, KStandardGuiItem::cancel());
+    KGuiItem::assign(d->backPB, KStandardGuiItem::back());
+    KGuiItem::assign(d->nextPB, KStandardGuiItem::cont());
+
     setMinimumSize(500, 400);
-    d->nextPB->setIcon(KIcon(QLatin1String( "go-next" )));
-    d->backPB->setIcon(KIcon(QLatin1String( "go-previous" )));
-    d->cancelPB->setIcon(KIcon(QLatin1String( "dialog-cancel" )));
     d->cancelPB->setVisible(false);
 
     connect(d->frontend, SIGNAL(go(QString,QStringList)),
@@ -132,15 +138,15 @@ void DebconfGui::init()
             d->backPB, SLOT(setEnabled(bool)));
 
     // find out the distribution logo
-    QString distro_logo(QLatin1String( "/usr/share/pixmaps/debian-logo.png" ));
+    QString distro_logo(QStringLiteral( "/usr/share/pixmaps/debian-logo.png" ));
     QProcess *myProcess = new QProcess(this);
 
-    myProcess->start(QLatin1String( "hostname" ));
+    myProcess->start(QStringLiteral( "hostname" ));
     myProcess->waitForFinished();
     QString hostname = QString::fromLatin1( myProcess->readAllStandardOutput() );
     setWindowTitle(i18n("Debconf on %1", hostname.trimmed()));
 
-    myProcess->start(QLatin1String( "lsb_release" ), QStringList() << QLatin1String( "-is" ));
+    myProcess->start(QStringLiteral( "lsb_release" ), QStringList() << QStringLiteral( "-is" ));
     if (myProcess->waitForFinished()) {
         if (myProcess->exitCode() == 0){
             QString data = QLatin1String( myProcess->readAllStandardOutput() );
@@ -165,10 +171,10 @@ void DebconfGui::init()
 
 DebconfElement* DebconfGuiPrivate::createElement(const QString &k)
 {
-    kDebug() << "creating widget for " << k;
+    qCDebug(DEBCONF) << "creating widget for " << k;
 
     QString extendedDescription = frontend->property(k, DebconfFrontend::ExtendedDescription);
-    extendedDescription.replace(QLatin1String( "\\n" ), QLatin1String( "\n" ));
+    extendedDescription.replace(QStringLiteral( "\\n" ), QStringLiteral( "\n" ));
 
     switch (frontend->type(k)) {
     case DebconfFrontend::Boolean:
@@ -176,7 +182,7 @@ DebconfElement* DebconfGuiPrivate::createElement(const QString &k)
         DebconfBoolean *element = new DebconfBoolean(k, parentWidget);
         element->setBoolean(extendedDescription,
                             frontend->property(k, DebconfFrontend::Description),
-                            frontend->value(k) == QLatin1String( "true" ));
+                            frontend->value(k) == QStringLiteral( "true" ));
         return element;
     }
     case DebconfFrontend::Error:
@@ -191,8 +197,8 @@ DebconfElement* DebconfGuiPrivate::createElement(const QString &k)
         DebconfMultiselect *element = new DebconfMultiselect(k, parentWidget);
         element->setMultiselect(extendedDescription,
                                 frontend->property(k, DebconfFrontend::Description),
-                                frontend->value(k).split(QLatin1String( ", " )),
-                                frontend->property(k, DebconfFrontend::Choices).split(QLatin1String( ", " )));
+                                frontend->value(k).split(QStringLiteral( ", " )),
+                                frontend->property(k, DebconfFrontend::Choices).split(QStringLiteral( ", " )));
         return element;
     }
     case DebconfFrontend::Note:
@@ -215,7 +221,7 @@ DebconfElement* DebconfGuiPrivate::createElement(const QString &k)
         element->setSelect(extendedDescription,
                            frontend->property(k, DebconfFrontend::Description),
                            frontend->value(k),
-                           frontend->property(k, DebconfFrontend::Choices).split(QLatin1String( ", " )));
+                           frontend->property(k, DebconfFrontend::Choices).split(QStringLiteral( ", " )));
         return element;
     }
     case DebconfFrontend::String:
@@ -233,7 +239,7 @@ DebconfElement* DebconfGuiPrivate::createElement(const QString &k)
         return element;
     }
     default:
-        kWarning() << "Default REACHED!!!";
+        qWarning() << "Default REACHED!!!";
         DebconfElement *element = new DebconfElement(k, parentWidget);
         QLabel *label = new QLabel(element);
         label->setText(i18n("<b>Not implemented</b>: The input widget for data"
@@ -248,7 +254,7 @@ DebconfElement* DebconfGuiPrivate::createElement(const QString &k)
 void DebconfGui::cmd_go(const QString &title, const QStringList &input)
 {
     Q_D(DebconfGui);
-    kDebug() << "# GO GUI";
+    qCDebug(DEBCONF) << "# GO GUI";
     d->cleanup();
     QVBoxLayout *layout = qobject_cast<QVBoxLayout*>(d->parentWidget->layout());
     // if we have just one element and we are showing
@@ -303,25 +309,25 @@ void DebconfGui::cmd_progress(const QString &cmd)
     DebconfProgress *element = d->elementProgress;
 
     QStringList commands = cmd.split(QLatin1Char( ' ' ));
-    kDebug() << "KPROGRESS" << commands;
-    if (commands.first() == QLatin1String( "START" )) {
+    qCDebug(DEBCONF) << "KPROGRESS" << commands;
+    if (commands.first() == QStringLiteral( "START" )) {
         d->titleL->setText(d->frontend->property(commands.at(3), DebconfFrontend::Description));
         int progress_min = commands.at(1).toInt();
         int progress_max = commands.at(2).toInt();
         element->startProgress(d->frontend->property(commands.at(3), DebconfFrontend::ExtendedDescription),
                                progress_min,
                                progress_max);
-    } else if (commands.first() == QLatin1String( "SET" )) {
+    } else if (commands.first() == QStringLiteral( "SET" )) {
         element->setProgress(commands.at(1).toInt());
-    } else if (commands.first() == QLatin1String( "STEP" )) {
+    } else if (commands.first() == QStringLiteral( "STEP" )) {
         element->stepProgress(commands.at(1).toInt());
-    } else if (commands.first() == QLatin1String( "INFO" )) {
+    } else if (commands.first() == QStringLiteral( "INFO" )) {
         element->setProgressInfo(d->frontend->property(commands.at(1), DebconfFrontend::Description));
-    } else if (commands.first() == QLatin1String( "STOP" )) {
+    } else if (commands.first() == QStringLiteral( "STOP" )) {
         element->stopProgress();
     }
     emit activated();
-    d->frontend->say(QLatin1String( "0 ok" ));
+    d->frontend->say(QStringLiteral( "0 ok" ));
 }
 
 void DebconfGuiPrivate::cleanup()
@@ -367,5 +373,3 @@ void DebconfGui::closeEvent(QCloseEvent *event)
     d->frontend->cancel();
     QWidget::closeEvent(event);
 }
-
-#include "DebconfGui.moc"

@@ -51,9 +51,7 @@
 #ifndef DEBCONF_GUI_H
 #define DEBCONF_GUI_H
 
-#include <QtGui/QWidget>
-
-#include <kdemacros.h>
+#include <QWidget>
 
 namespace DebconfKde {
 
@@ -85,7 +83,7 @@ namespace DebconfKde {
  * Only delete it after you are sure no more operations ended.
  */
 class DebconfGuiPrivate;
-class KDE_EXPORT DebconfGui : public QWidget
+class Q_DECL_EXPORT DebconfGui : public QWidget
 {
     Q_OBJECT
 public:

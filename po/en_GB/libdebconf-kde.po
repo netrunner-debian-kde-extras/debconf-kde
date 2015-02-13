@@ -2,50 +2,36 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2010.
+# Steve Allewell <steve.allewell@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugs.kde.org\n"
-"POT-Creation-Date: 2012-10-24 04:13+0200\n"
-"PO-Revision-Date: 2010-12-03 22:29+0000\n"
-"Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
-"Language-Team: British English <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2014-12-20 07:50+0000\n"
+"PO-Revision-Date: 2014-11-29 17:56+0000\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
 
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andrew Coles"
+msgstr "Andrew Coles, Steve Allewell"
 
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andrew_coles@yahoo.co.uk"
+msgstr "andrew_coles@yahoo.co.uk, steve.allewell@gmail.com"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton)
-#: src/DebconfBoolean.ui:48
-msgid "Yes"
-msgstr "Yes"
-
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#: src/DebconfBoolean.ui:64
-msgid "No"
-msgstr "No"
-
-#. i18n: ectx: property (text), widget (QLabel, iconL)
-#: src/DebconfError.ui:23 src/DebconfGui.ui:44
-msgid "Icon"
-msgstr "Icon"
-
-#: src/DebconfGui.cpp:141
+#: src/DebconfGui.cpp:147
 #, kde-format
 msgid "Debconf on %1"
 msgstr "Debconf on %1"
 
-#: src/DebconfGui.cpp:239
+#: src/DebconfGui.cpp:245
 #, kde-format
 msgid ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
@@ -54,33 +40,32 @@ msgstr ""
 "<b>Not implemented</b>: The input widget for data type '%1' is not "
 "implemented. Will use default of '%2'."
 
-#. i18n: ectx: property (text), widget (KPushButton, cancelPB)
-#: src/DebconfGui.ui:83
-msgid "Cancel"
-msgstr "Cancel"
-
-#. i18n: ectx: property (text), widget (KPushButton, backPB)
-#: src/DebconfGui.ui:93
-msgid "Back"
-msgstr "Back"
-
-#. i18n: ectx: property (text), widget (KPushButton, nextPB)
-#: src/DebconfGui.ui:100
-msgid "Continue"
-msgstr "Continue"
-
-#: tools/main.cpp:38
+#: tools/main.cpp:42
+msgctxt "@title"
 msgid "Debconf KDE"
 msgstr "Debconf KDE"
 
-#: tools/main.cpp:40
+#: tools/main.cpp:44
+msgctxt "@info"
 msgid "Debconf frontend for KDE"
 msgstr "Debconf frontend for KDE"
 
-#: tools/main.cpp:46
+#: tools/main.cpp:52
+msgctxt "@info:shell"
 msgid "Path to where the socket should be created"
 msgstr "Path to where the socket should be created"
 
-#: tools/main.cpp:47
+#: tools/main.cpp:53
+msgctxt "@info:shell value name"
+msgid "path_to_socket"
+msgstr "path_to_socket"
+
+#: tools/main.cpp:57
+msgctxt "@info:shell"
 msgid "FIFO file descriptors for communication with Debconf"
-msgstr ""
+msgstr "FIFO file descriptors for communication with Debconf"
+
+#: tools/main.cpp:58
+msgctxt "@info:shell value name"
+msgid "read_fd,write_fd"
+msgstr "read_fd,write_fd"
