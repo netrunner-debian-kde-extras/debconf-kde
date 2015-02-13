@@ -1,5 +1,5 @@
 # SymbolsHelper-Confirmed: 0.2 amd64
-libdebconf-kde.so.0 libdebconf-kde0 #MINVER#
+libdebconf-kde.so.1 libdebconf-kde1 #MINVER#
  _ZN10DebconfKde10DebconfGui10closeEventEP11QCloseEvent@Base 0.1+git20101209
  _ZN10DebconfKde10DebconfGui11deactivatedEv@Base 0.1+git20101209
  _ZN10DebconfKde10DebconfGui11qt_metacallEN11QMetaObject4CallEiPPv@Base 0.1+git20101209
