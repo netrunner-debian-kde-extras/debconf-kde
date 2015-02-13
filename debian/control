@@ -2,11 +2,18 @@ Source: debconf-kde
 Section: kde
 Priority: optional
 Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Matthias Klumpp <mak@debian.org>
-Build-Depends: cmake,
+Uploaders: Matthias Klumpp <mak@debian.org>,
+           Maximiliano Curia <maxy@debian.org>
+Build-Depends: cmake (>= 2.8.12),
                debhelper (>= 9),
-               kdelibs5-dev,
-               pkg-kde-tools (>= 0.5.0)
+               extra-cmake-modules (>= 1.5.0),
+               libkf5coreaddons-dev (>= 5.0.0),
+               libkf5i18n-dev (>= 5.0.0),
+               libkf5iconthemes-dev (>= 5.0.0),
+               libkf5textwidgets-dev (>= 5.0.0),
+               libkf5widgetsaddons-dev (>= 5.0.0),
+               pkg-kde-tools (>= 0.15.16),
+               qtbase5-dev (>= 5.2.0)
 Standards-Version: 3.9.4
 Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/debconf-kde.git

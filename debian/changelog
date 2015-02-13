@@ -1,6 +1,8 @@
 debconf-kde (1.0.1-1~) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Update build dependencies to build against experimental and to
+    follow cmake.
 
  -- Maximiliano Curia <maxy@debian.org>  Fri, 13 Feb 2015 23:08:49 +0100
 
