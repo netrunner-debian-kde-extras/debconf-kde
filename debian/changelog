@@ -4,6 +4,7 @@ debconf-kde (1.0.1-1~) UNRELEASED; urgency=medium
   * Update build dependencies to build against experimental and to
     follow cmake.
   * Bump Standards-Version to 3.9.6, no changes needed.
+  * Update copyright information.
 
  -- Maximiliano Curia <maxy@debian.org>  Fri, 13 Feb 2015 23:08:49 +0100
 
