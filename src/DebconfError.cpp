@@ -19,7 +19,9 @@
 
 #include "DebconfError.h"
 
-#include <KIcon>
+#include <QIcon>
+
+#include <KIconLoader>
 
 using namespace DebconfKde;
 
@@ -27,7 +29,8 @@ DebconfError::DebconfError(const QString &name, QWidget *parent)
  : DebconfElement(name, parent)
 {
     setupUi(this);
-    iconL->setPixmap(KIcon(QLatin1String( "dialog-error" )).pixmap(64, 64));
+    iconL->setPixmap(QIcon::fromTheme(QStringLiteral("dialog-error")).pixmap(KIconLoader::SizeHuge,
+                                                                             KIconLoader::SizeHuge));
 }
 
 DebconfError::~DebconfError()
@@ -44,5 +47,3 @@ void DebconfError::setError(const QString &description, const QString &error)
     descriptionL->setText(description);
     textTE->setText(error);
 }
-
-#include "DebconfError.moc"
