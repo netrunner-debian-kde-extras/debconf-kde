@@ -41,6 +41,7 @@ Package: libdebconf-kde-dev
 Section: libdevel
 Architecture: any
 Depends: libdebconf-kde1 (= ${binary:Version}),
+         qtbase5-dev (>= 5.2.0),
          ${misc:Depends}
 Description: Development headers for the Debconf KDE library
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
@@ -54,8 +55,7 @@ Description: Development headers for the Debconf KDE library
 
 Package: debconf-kde-helper
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Debconf KDE GUI frontend tool
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
  applications.
@@ -86,8 +86,7 @@ Section: debug
 Priority: extra
 Architecture: any
 Multi-Arch: foreign
-Depends: libdebconf-kde1 (= ${binary:Version}),
-         ${misc:Depends}
+Depends: libdebconf-kde1 (= ${binary:Version}), ${misc:Depends}
 Conflicts: libdebconf-kde-dbg
 Replaces: libdebconf-kde-dbg
 Description: Debconf KDE debugging symbols
