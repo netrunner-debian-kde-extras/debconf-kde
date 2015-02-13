@@ -14,7 +14,7 @@ Build-Depends: cmake (>= 2.8.12),
                libkf5widgetsaddons-dev (>= 5.0.0),
                pkg-kde-tools (>= 0.15.16),
                qtbase5-dev (>= 5.2.0)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/debconf-kde.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/debconf-kde.git
@@ -66,8 +66,8 @@ Description: Debconf KDE GUI frontend tool
 
 Package: debconf-kde-dbg
 Section: debug
-Architecture: any
 Priority: extra
+Architecture: any
 Depends: libdebconf-kde0 (= ${binary:Version}),
          ${misc:Depends}
 Recommends: kdelibs5-dbg
