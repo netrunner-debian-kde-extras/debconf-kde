@@ -1,3 +1,11 @@
+debconf-kde (1.0.1-0ubuntu2) vivid; urgency=medium
+
+  * debconf-kde-data now replaces and breaks older versions of the lib
+    + as up to the sobump for version 1 the library
+      package also had translation data.
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 16 Feb 2015 08:31:16 +0100
+
 debconf-kde (1.0.1-0ubuntu1) vivid; urgency=medium
 
   [ José Manuel Santamaría Lema ]
