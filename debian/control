@@ -71,6 +71,8 @@ Package: debconf-kde-data
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}
+Breaks: libdebconf-kde0
+Replaces: libdebconf-kde0
 Description: Debconf KDE data files
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
  applications.
