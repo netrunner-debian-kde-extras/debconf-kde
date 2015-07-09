@@ -1,6 +1,6 @@
-debconf-kde (0.3-2~) UNRELEASED; urgency=medium
+debconf-kde0 (0.3-2~) UNRELEASED; urgency=medium
 
-  * 
+  * Reintroduce libdebconf-kde0 in src:debconf-kde0.
 
  -- Maximiliano Curia <maxy@debian.org>  Fri, 10 Jul 2015 01:32:44 +0200
 
