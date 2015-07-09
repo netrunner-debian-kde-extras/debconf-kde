@@ -1,8 +1,8 @@
-debconf-kde (1.0.1-3~) UNRELEASED; urgency=medium
+debconf-kde (1.0.1-3) unstable; urgency=medium
 
   * Add missing Breaks/Replaces. (Closes: #791853)
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 03 Jul 2015 00:36:15 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 09 Jul 2015 11:53:21 +0200
 
 debconf-kde (1.0.1-2) unstable; urgency=medium
 
