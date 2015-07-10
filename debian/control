@@ -11,7 +11,7 @@ Build-Depends: cmake,
 Standards-Version: 3.9.6
 Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/debconf-kde.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/debconf-kde.git
+Vcs-Browser: http://anonscm.debian.org/cgit/pkg-kde/kde-extras/debconf-kde.git
 
 Package: libdebconf-kde0
 Section: libs
