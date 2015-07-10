@@ -33,6 +33,7 @@ Section: libdevel
 Architecture: any
 Depends: libdebconf-kde0 (= ${binary:Version}),
          ${misc:Depends}
+Conflicts: libdebconf-kde-dev
 Description: Development headers for the Debconf KDE library
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
  applications.
