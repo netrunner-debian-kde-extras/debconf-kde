@@ -14,7 +14,7 @@ Files: src/DebconfGui.h
 Copyright: 2008, Petr Rockai <me@mornfall.net>
            2010, Daniel Nicoletti <dantti85-pk@yahoo.com.br>
 License: LGPL-2+ or BSD-3-clause
- Parts of these files which were written by Petr Rockai are
+Comment: Parts of these files which were written by Petr Rockai are
  licensed under BSD, parts written by Daniel Nicoletti are LGPL-2+
 
 Files: debian/*
