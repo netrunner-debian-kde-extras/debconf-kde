@@ -8,7 +8,7 @@ Build-Depends: cmake,
                debhelper (>= 9),
                kdelibs5-dev,
                pkg-kde-tools (>= 0.5.0)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/debconf-kde.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/debconf-kde.git
