@@ -1,6 +1,6 @@
 debconf-kde (1.0.1-4~) UNRELEASED; urgency=medium
 
-  * 
+  * Test against gcc5.
 
  -- Maximiliano Curia <maxy@debian.org>  Tue, 01 Sep 2015 14:01:12 +0200
 
