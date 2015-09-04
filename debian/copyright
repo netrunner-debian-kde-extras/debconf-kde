@@ -7,7 +7,7 @@ Files: *
 Copyright: 2010, Daniel Nicoletti <dantti12@gmail.com>
            2014, Harald Sitter <sitter@kde.org>
            2011, Modestas Vainius <modax@debian.org>
-License: LGPL-2+
+License: LGPL-2.0+
 
 Files: src/DebconfGui.cpp
        src/DebconfGui.h
@@ -16,9 +16,10 @@ Files: src/DebconfGui.cpp
 Copyright: 2010, Daniel Nicoletti <dantti12@gmail.com>
            2011, Modestas Vainius <modax@debian.org>
            2008, Petr Rockai <me@mornfall.net>
-License: BSD-3-clause or LGPL-2+
+License: BSD-3-clause or LGPL-2.0+
  This license reflects the original Adept code:
- -*- C++ -*- (c) 2008 Petr Rockai <me@mornfall.net>
+ .
+ (c) 2008 Petr Rockai <me@mornfall.net>
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are
  met:
@@ -86,7 +87,7 @@ License: GPL-2+
  On Debian systems the full text of the GNU General Public License can be found
  in the '/usr/share/common-licenses/GPL-2' file.
 
-License: LGPL-2+
+License: LGPL-2.0+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Library General Public
  License as published by the Free Software Foundation; either
