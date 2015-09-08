@@ -1,18 +1,21 @@
 Source: debconf-kde
 Section: kde
 Priority: optional
-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
-Uploaders: Matthias Klumpp <mak@debian.org>
-Build-Depends: cmake,
+Maintainer: Debian/Kubuntu KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Uploaders: Matthias Klumpp <mak@debian.org>,
+           Maximiliano Curia <maxy@debian.org>
+Build-Depends: cmake (>= 2.8.12),
                debhelper (>= 9),
-               extra-cmake-modules,
-               libkf5coreaddons-dev,
-               libkf5i18n-dev,
-               libkf5iconthemes-dev,
-               libkf5textwidgets-dev,
-               libkf5widgetsaddons-dev,
-               pkg-kde-tools (>> 0.15.15)
+               extra-cmake-modules (>= 1.5.0),
+               libkf5coreaddons-dev (>= 5.0.0),
+               libkf5i18n-dev (>= 5.0.0),
+               libkf5iconthemes-dev (>= 5.0.0),
+               libkf5textwidgets-dev (>= 5.0.0),
+               libkf5widgetsaddons-dev (>= 5.0.0),
+               pkg-kde-tools (>= 0.15.16),
+               qtbase5-dev (>= 5.2.0)
 Standards-Version: 3.9.6
+XS-Testsuite: autopkgtest
 Homepage: http://projects.kde.org/projects/extragear/sysadmin/libdebconf-kde
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-extras/debconf-kde.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-extras/debconf-kde.git
@@ -37,7 +40,14 @@ Description: Debconf KDE GUI library
 Package: libdebconf-kde-dev
 Section: libdevel
 Architecture: any
-Depends: libdebconf-kde1 (= ${binary:Version}), ${misc:Depends}
+Depends: libdebconf-kde1 (= ${binary:Version}),
+         libkf5coreaddons-dev,
+         libkf5i18n-dev,
+         libkf5iconthemes-dev,
+         libkf5textwidgets-dev,
+         libkf5widgetsaddons-dev,
+         qtbase5-dev (>= 5.2.0),
+         ${misc:Depends}
 Description: Development headers for the Debconf KDE library
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
  applications.
@@ -64,9 +74,10 @@ Description: Debconf KDE GUI frontend tool
 
 Package: debconf-kde-data
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
-Breaks: libdebconf-kde0 (<< 1.0.0)
-Replaces: libdebconf-kde0 (<< 1.0.0)
+Breaks: libdebconf-kde0 (<= 0.3-1)
+Replaces: libdebconf-kde0 (<= 0.3-1)
 Multi-Arch: foreign
 Description: Debconf KDE data files
  Debconf KDE is a GUI library for including Debconf frontends in Qt-based
@@ -80,8 +91,8 @@ Description: Debconf KDE data files
 
 Package: debconf-kde-dbg
 Section: debug
-Architecture: any
 Priority: extra
+Architecture: any
 Multi-Arch: foreign
 Depends: libdebconf-kde1 (= ${binary:Version}), ${misc:Depends}
 Conflicts: libdebconf-kde-dbg
