@@ -1,7 +1,7 @@
 Source: debconf-kde
 Section: kde
 Priority: optional
-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Maintainer: Debian/Kubuntu KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
 Uploaders: Matthias Klumpp <mak@debian.org>,
            Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.12),
@@ -41,6 +41,11 @@ Package: libdebconf-kde-dev
 Section: libdevel
 Architecture: any
 Depends: libdebconf-kde1 (= ${binary:Version}),
+         libkf5coreaddons-dev,
+         libkf5i18n-dev,
+         libkf5iconthemes-dev,
+         libkf5textwidgets-dev,
+         libkf5widgetsaddons-dev,
          qtbase5-dev (>= 5.2.0),
          ${misc:Depends}
 Description: Development headers for the Debconf KDE library
