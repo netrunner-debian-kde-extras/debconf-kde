@@ -1,3 +1,10 @@
+debconf-kde (1.0.2-0ubuntu1) wily; urgency=medium
+
+  * New upstream bugfix release.
+  * Drop all patches; upstreamed.
+
+ -- Harald Sitter <sitter@kde.org>  Wed, 23 Sep 2015 12:59:33 +0200
+
 debconf-kde (1.0.1-3ubuntu1) wily; urgency=medium
 
   * Add upstream_fix-dependency-lookup.patch to make sure cmake dependees of
