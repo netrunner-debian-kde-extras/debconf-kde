@@ -1,5 +1,3 @@
-# Translation of libdebconf-kde to Norwegian Bokmål
-#
 # Bjørn Kvisli <bjorn.kvisli@gmail.com>, 2011.
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2011.
 msgid ""
